@@ -1,0 +1,246 @@
+<d:html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        {{ @component.onload, ./src/components }}
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="bulma.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ @data.title }}</title>
+    </head>
+    <body>
+        {{ @component.header, ./src/components }}
+        <div class="mainview">
+            <div class="flexCenter">
+                <section class="section">
+                    <div id="mainTitle">
+                        <img id="mainImg" src="./assets/rino256.png">
+                        <h1 class="title">Fast learning, preprocessing, intuitive web framework</h1>
+                    </div>
+                    <button class="button is-success">Get started</button>
+                    <button class="button is-link">Install</button>
+                </section>
+            </div>
+            <div class="flexCenter">
+                <section class="section index-content">
+                    <div class="columns">
+                        <div class="column">
+                            <h1 class="title">Easy</h1>
+                            <p>
+                                Just common learnings that front-end developers do.
+                                Standard HTML, CSS, Javascript and Node.js and preprocessing system.
+                                We don't need to waste our time and it just works.
+                            </p>
+                        </div>
+                        <div class="column">
+                            <h1 class="title">Performant</h1>
+                            <p>
+                                No virtual dom, smaller files, reusable components with full control over the pages.
+                                Standard SEO, standard web setup, no more problems with static site generation
+                            </p>
+                        </div>
+                        <div class="column">
+                            <h1 class="title">Freedom</h1>
+                            <p>
+                                Use libraries you like.
+                                Manage your important state in local storage.
+                                And store the others in variables.
+                                Create or use what you like.
+
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="flexCenter">
+                <section class="section index-content">
+                    <h1 class="title">Sponsors</h1>
+                    <h2 class="subtitle">
+                        Become a monthly sponsor and put your logo and name here!
+                    </h2>
+                </section>
+            </div>
+            <div class="flexCenter">
+                <section class="section index-content">
+                    <h1 class="title">Components are so easy with Rino.js!</h1>
+                    <br />
+                    <h2 class="subtitle">
+                        ./src/components/sometest.tot
+                    </h2>
+                    <p>- '@component' indicates that it should be preprocessed component.</p>
+                    <p>- 'test' is name of component file which is 'test.tot'.</p>
+                    <p>- './src/components' is directory path of where component file is.</p>
+                    </p>
+                    <pre>
+                        <code>
+&lt;d:html&gt;
+    &lcub;&lcub; @component.test, ./src/components &rcub;&rcub;
+&lt;/d:html&gt;<!--
+                        --></code>
+                    </pre>
+                    <br />
+                    <h2 class="subtitle">
+                        ./src/components/test.tot
+                    </h2>
+                    <pre>
+                        <code>
+&lt;d:html&gt;
+&lt;div&gt;
+test
+&lt;/div&gt;
+&lt;/d:html&gt;<!--
+                        --></code>
+                    </pre>
+                    <br />
+                    <h2 class="subtitle">
+                        Result
+                    </h2>
+                    <pre>
+                        <code>
+&lt;div&gt;
+test
+&lt;/div&gt;<!--
+                        --></code>
+                    </pre>
+                    <br />
+                    <h2 class="subtitle">Want to learn more?</h2>
+                    <button class="button is-success">Document</button>
+                </section>
+            </div>
+            <div class="flexCenter">
+                <section class="section index-content">
+                    <h1 class="title">Shop</h1>
+                    <button class="button is-primary" @click="window.open('https://www.redbubble.com/shop/ap/149559711');">RB Rino Shop</button>
+                    <button class="button is-primary" @click="window.open('https://www.redbubble.com/people/Geargom/shop');">RB Geargom Shop</button>
+                    <h2 class="subtitle mt-3">
+                        Your purchase from Rino design or Geargom shop will help us to continue our projects for software, game and designs.
+                        We are receiving roughly 20~30% from the whole price.
+                    </h2>
+                    <div class="columns">
+                        <img class="column merchImg" src="./assets/rino_bucket_hat.jpg">
+                        <img class="column merchImg" src="./assets/rino_backpack.jpg">
+                        <img class="column merchImg" src="./assets/rino_desk_mat.jpg">
+                    </div>
+                </section>
+            </div>
+        </div>
+        {{ @component.footer, ./src/components }}
+    </body>
+    </html>
+</d:html>
+<d:css>
+    html {
+        min-width: auto !important;
+    }
+
+    body {
+        overflow-wrap: break-word;
+        font-family: 'Ubuntu Mono', 'Roboto Mono', Consolas, Courier New, Monaco, monospace !important;
+    }
+
+    .button {
+        margin: 5px 0px !important;
+    }
+
+    .merchImg {
+        width: 256px;
+    }
+
+    .mt-3 {
+        margin-top: 6px;
+    }
+
+    .index-content {
+        width: 940px;
+    }
+
+    .subtitle {
+        font-size: 1.5em;
+    }
+
+    .flexCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainview {
+        min-height: calc(100vh - 30px);
+        margin: 0px !important;
+    }
+
+    .mainview .section p
+    {
+        font-size: 1.1em;
+    }
+
+    #mainTitle {
+        width: 600px;
+        margin: 50px auto;
+        color: #212121;
+        font-weight: bold;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #mainTitle h1 {
+        font-size: 1.4em;
+        width: 100%;
+    }
+
+    #mainImg {
+        margin: auto;
+    }
+
+    .non-selectable {
+        user-select: none;
+    }
+
+    .ml-4 {
+        margin-left: 8px !important;
+    }
+
+
+    @media all and (max-width: 940px) {
+        .index-content {
+            width: 100%;
+        }
+    }
+
+    @media all and (max-width: 620px) {
+        #mainTitle {
+            width: auto;
+            color: #212121;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .mainview .section .title {
+            font-size: 1.4em;
+        }
+
+        .mainview .section .subtitle {
+            font-size: 1.3em;
+        }
+    }
+
+    @media all and (max-width: 300px) {
+        #mainImg {
+            width: 100%;
+        }
+    }
+</d:css>
+<d:js>
+</d:js>
+<d:test>
+
+</d:test>

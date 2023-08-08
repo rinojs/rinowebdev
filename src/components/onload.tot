@@ -1,0 +1,19 @@
+<d:html>
+</d:html>
+<d:js>
+const onloadFunctions = [];
+
+function mount(fn)
+{
+    onloadFunctions.push(fn);
+}
+
+window.onload = function() {
+    for(const fn of onloadFunctions)
+    {
+        fn();
+    }
+}
+</d:js>
+<d:css>
+</d:css>
