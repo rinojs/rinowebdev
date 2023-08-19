@@ -1,13 +1,15 @@
 <d:html>
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script>
-    kofiWidgetOverlay.draw('geargom', {
+    kofiWidgetOverlay.draw('opdev1004', {
         'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'Support Us',
+        'floating-chat.donateButton.text': 'Support me',
         'floating-chat.donateButton.background-color': '#5cb85c',
         'floating-chat.donateButton.text-color': '#fff'
     });
     </script>
+
+    
 </d:html>
 <d:js>
 </d:js>
@@ -18,7 +20,7 @@
         right: 16px;
     }
 
-    @media all and (max-width: 328px) {
+    @media all and (max-width: 500px) {
         .floatingchat-container-wrap,
         .floating-chat-kofi-popup-iframe {
             display: none;

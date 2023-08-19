@@ -1,0 +1,123 @@
+<d:html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        {{ @preload, ./src/preloads/preload.tot }}
+        {{ @preload, ./src/preloads/onload.tot }}
+        {{ @preload, ./src/preloads/doc.tot }}
+        <script type="text/javascript" src="/documents/introduction-main.js"></script>
+        <link rel="stylesheet" href="/documents/introduction-style.css">
+        <link rel="stylesheet" href="/bulma.min.css">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        {{ @component, ./src/components/head.tot }}
+        {{ @component, ./src/components/font.tot }}
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ @data.title }}</title>
+    </head>
+    <body>
+        {{ @component, ./src/components/content-header.tot }}
+        <div class="mainview">
+            <div class="columns">
+                {{ @component, ./src/components/doc-sidebar.tot }}
+                <div class="column">
+                    <section class="section">
+                        <img id="mainImg" src="/assets/rino256.png">
+
+                        <h1 class="title">What is Rino.js?</h1>
+                        <h2 class="subtitle">Fast learning, preprocessing, intuitive web framework</h2>
+                        <p>
+                            Rino.js is a JavaScript framework designed to revolutionize the way web developers approach frontend development.
+                            Originally conceived as a templating tool for CMS and other applications, Rino.js has rapidly evolved into a comprehensive web framework that prioritizes fast learning, efficient preprocessing, and an intuitive development experience.
+                        </p>
+                        <br />
+                        <p>
+                            Unlike other web frameworks that often overcomplicate the development process by adding unnecessary layers of complexity, Rino.js embraces a refreshingly straightforward approach.
+                            Its core philosophy centers around empowering developers to swiftly create webpages without the steep learning curve associated with many existing frameworks.
+                        </p>
+                        <br />
+                        <p>
+                            In a world where web development is often synonymous with complexity, Rino.js stands as a beacon of simplicity.
+                            Its elegantly minimalistic syntax complements your existing knowledge of HTML, CSS, JavaScript, and Node.js.
+                            A mere smattering of additional Rino.js syntax is all you need to unlock its full potential.
+                        </p>
+                        <br />
+                        <p>
+                            Rino.js is more than a framework; it's a mindset shift.
+                            Join us in embracing an approach to frontend development that prizes clarity, efficiency, and a return to the fundamentals.
+                            Experience the future of web development – experience Rino.js.
+                        </p>
+                        <br />
+                    </section>
+                </div>
+            </div>
+        </div>
+        {{ @component, ./src/components/footer.tot }}
+    </body>
+    </html>
+</d:html>
+<d:css>
+    .merchImg {
+        width: 256px;
+    }
+
+    .mt-3 {
+        margin-top: 6px;
+    }
+
+    .subtitle {
+        font-size: 1.5em;
+    }
+
+    .flexCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainview .section p
+    {
+        font-size: 1.1em;
+    }
+
+    #mainImg {
+        margin: auto;
+    }
+
+    .non-selectable {
+        user-select: none;
+    }
+
+    .ml-4 {
+        margin-left: 8px !important;
+    }
+
+    @media all and (max-width: 620px) {
+        #mainTitle {
+            width: auto;
+            color: #212121;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .mainview .section .title {
+            font-size: 1.4em;
+        }
+
+        .mainview .section .subtitle {
+            font-size: 1.3em;
+        }
+    }
+
+    @media all and (max-width: 300px) {
+        #mainImg {
+            width: 100%;
+        }
+    }
+    
+</d:css>
+<d:js>
+</d:js>

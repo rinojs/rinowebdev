@@ -1,0 +1,22 @@
+<d:js>
+</d:js>
+<d:css>
+html {
+    min-width: auto !important;
+}
+
+body {
+    overflow-wrap: break-word;
+    font-family: 'Noto Sans Mono', monaco, Consolas, "Lucida Console", Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+}
+
+.button {
+    margin: 5px 0px !important;
+}
+
+.mainview {
+    max-width: 940px;
+    min-height: calc(100vh - 30px);
+    margin: 60px auto 0px auto !important;
+}
+</d:css>

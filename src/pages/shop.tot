@@ -1,0 +1,118 @@
+<d:html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        {{ @preload, ./src/preloads/preload.tot }}
+        {{ @preload, ./src/preloads/onload.tot }}
+        <script type="text/javascript" src="shop-main.js"></script>
+        <link rel="stylesheet" href="shop-style.css">
+        <link rel="stylesheet" href="bulma.min.css">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        {{ @component, ./src/components/head.tot }}
+        {{ @component, ./src/components/font.tot }}
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ @data.title }}</title>
+    </head>
+    <body>
+        {{ @component, ./src/components/header.tot }}
+        <div class="mainview">
+            <section class="section">
+                <div id="mainTitle">
+                    <img id="mainImg" src="/assets/rino256.png">
+                    <h1 class="title">Rino.js Shop</h1>
+                    <h2 class="subtitle">Another way to support us</h2>
+                    <button class="button is-danger" @click="window.open('https://www.redbubble.com/shop/ap/149559711');">RB Rino Shop</button>
+                    <button class="button is-danger" @click="window.open('https://www.redbubble.com/people/Geargom/shop');">RB Geargom Shop</button>
+                </div>
+                <h2 class="subtitle mt-3">
+                    Your purchase from Rino Shop or Geargom shop will help us to continue our projects for software, game and designs.
+                    We are receiving roughly 20~30% from the whole price.
+                </h2>
+                <div class="columns">
+                    <img class="column merchImg" src="/assets/rino_bucket_hat.jpg">
+                    <img class="column merchImg" src="/assets/rino_backpack.jpg">
+                    <img class="column merchImg" src="/assets/rino_desk_mat.jpg">
+                </div>
+            </section>
+        </div>
+        {{ @component, ./src/components/footer.tot }}
+    </body>
+    </html>
+</d:html>
+<d:css>
+.merchImg {
+    width: 256px;
+}
+
+.mt-3 {
+    margin-top: 6px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
+
+.mainview .section p
+{
+    font-size: 1.1em;
+}
+
+#mainTitle {
+    width: 600px;
+    margin: 50px auto;
+    color: #212121;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+#mainTitle h1 {
+    font-size: 1.4em;
+    width: 100%;
+}
+
+#mainTitle h2 {
+    font-size: 1em;
+}
+
+#mainImg {
+    margin: auto;
+}
+
+.non-selectable {
+    user-select: none;
+}
+
+.ml-4 {
+    margin-left: 8px !important;
+}
+
+@media all and (max-width: 620px) {
+    #mainTitle {
+        width: auto;
+        color: #212121;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .mainview .section .title {
+        font-size: 1.4em;
+    }
+
+    .mainview .section .subtitle {
+        font-size: 1.3em;
+    }
+}
+
+@media all and (max-width: 300px) {
+    #mainImg {
+        width: 100%;
+    }
+}
+</d:css>
+<d:js>
+</d:js>
