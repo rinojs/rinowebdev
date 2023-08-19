@@ -1,0 +1,160 @@
+<d:html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        {{ @preload, ./src/preloads/preload.tot }}
+        {{ @preload, ./src/preloads/onload.tot }}
+        {{ @preload, ./src/preloads/doc.tot }}
+        <script type="text/javascript" src="/documents/component-main.js"></script>
+        <link rel="stylesheet" href="/documents/component-style.css">
+        <link rel="stylesheet" href="/bulma.min.css">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        {{ @component, ./src/components/head.tot }}
+        {{ @component, ./src/components/font.tot }}
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ @data.title }}</title>
+    </head>
+    <body>
+        {{ @component, ./src/components/content-header.tot }}
+        <div class="mainview">
+            <div class="columns">
+                {{ @component, ./src/components/doc-sidebar.tot }}
+                <div class="column">
+                    <section class="section">
+                        <h1 class="title">Component</h1>
+                        <br/>
+                        <h2 class="subtitle">Component in runtime</h2>
+                        <p>
+                            You write the component code just like preprocessed component but you can not place @preload or @component.
+                            You can still pass data and props to the runtime component as they are part of preprocessing.
+                            Rino will put the HTML part as a variable in the Javascript code. And you can use it for manipulating your GUI in runtime.
+                            Remember, we are planning to rework this feature as it is not that powerful. So this may change a lot.
+                        </p>
+
+                        <br />
+                        <br />
+                        <h2 class="subtitle">Example:</h2>
+                        <p>/src/page/index.tot:</p>
+<pre><code><\d:html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ @data.title }}</title>
+    </head>
+    <body>
+        some HTML content...
+        {{ component, ./test/components/comptest.tot, componentHTML }}
+        <button @click="addComponent();">Click me to add innerHTML</button>
+        <div id="comptesting"></div>
+        some HTML content...
+    </body>
+    </html>
+<\/d:html>
+<\d:css>
+    some css...
+<\/d:css>
+<\d:js>
+    some Javascript...
+    function addComponent()
+    {
+        document.getElementById('comptesting').innerHTML = document.getElementById('comptesting').innerHTML + componentHTML;
+    }
+<\/d:js></code></pre>
+                        <br />
+                        <p>/src/components/comptest.tot:</p>
+<pre><code><\d:html>
+    <div>
+        This is a component test!
+        And if it is successful this should be attached to the one of div.
+    </div>
+<\/d:html>
+<\d:js>
+    some Javascript...
+<\/d:js>
+<\d:css>
+    some CSS...
+<\/d:css></code></pre>
+                        <br />
+                        <p>
+                            In the example, from <code>{{ component, ./test/components/comptest.tot, componentHTML }}</code> componentHTML becomes name of variable in Javascript.
+                            If you want to pass props, then you can do it like <code>{{ component, ./test/components/comptest.tot, componentHTML, someprops }}</code>.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        {{ @component, ./src/components/footer.tot }}
+    </body>
+    </html>
+</d:html>
+<d:css>
+    .merchImg {
+        width: 256px;
+    }
+
+    .mt-3 {
+        margin-top: 6px;
+    }
+
+    .subtitle {
+        font-size: 1.5em;
+    }
+
+    .flexCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainview .section p
+    {
+        font-size: 1.1em;
+    }
+
+    #mainImg {
+        margin: auto;
+    }
+
+    .non-selectable {
+        user-select: none;
+    }
+
+    .ml-4 {
+        margin-left: 8px !important;
+    }
+
+    @media all and (max-width: 620px) {
+        #mainTitle {
+            width: auto;
+            color: #212121;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .mainview .section .title {
+            font-size: 1.4em;
+        }
+
+        .mainview .section .subtitle {
+            font-size: 1.3em;
+        }
+    }
+
+    @media all and (max-width: 300px) {
+        #mainImg {
+            width: 100%;
+        }
+    }
+    
+</d:css>
+<d:js>
+</d:js>

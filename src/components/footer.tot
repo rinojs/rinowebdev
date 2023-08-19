@@ -4,11 +4,22 @@
         <div class="columns footer-content">
             <div class="column">
                 <h2 class="subtitle">Docs</h2>
-                <p><a>Install</a></p>
+                <p><a href="/documents/introduction.html">Introduction</a></p>
+                <p><a href="/documents/installation.html">Installation & Setup</a></p>
+                <p><a href="/documents/system.html">System</a></p>
+                <p><a href="/documents/preprocessing-api.html">Preprocessing API</a></p>
+                <p><a href="/documents/preprocessed-page.html">Page</a></p>
+                <p><a href="/documents/preprocessed-component.html">@component</a></p>
+                <p><a href="/documents/preprocessed-preload.html">@preload</a></p>
+                <p><a href="/documents/preprocessed-data.html">@data</a></p>
+                <p><a href="/documents/preprocessed-event.html">@events</a></p>
+                <p><a href="/documents/preprocessed-props.html">@props</a></p>
+                <p><a href="/documents/escape.html">Escape</a></p>
+                <p><a href="/documents/component.html">Component</a></p>
             </div>
             <div class="column">
                 <h2 class="subtitle">Support us</h2>
-                <p><a href="https://ko-fi.com/geargom" target="__blank">Ko-fi</a></p>
+                <p><a href="https://ko-fi.com/opdev1004" target="__blank">Ko-fi</a></p>
                 <p><a href="https://github.com/sponsors/opdev1004" target="__blank">Github Sponsor</a></p>
                 <p><a href="https://www.redbubble.com/shop/ap/149559711" target="__blank">RB Rino Shop</a></p>
                 <p><a href="https://www.redbubble.com/people/Geargom/shop" target="__blank">RB Geargom Shop</a></p>

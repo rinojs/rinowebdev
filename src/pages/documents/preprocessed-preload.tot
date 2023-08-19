@@ -1,0 +1,139 @@
+<d:html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        {{ @preload, ./src/preloads/preload.tot }}
+        {{ @preload, ./src/preloads/onload.tot }}
+        {{ @preload, ./src/preloads/doc.tot }}
+        <script type="text/javascript" src="/documents/preprocessed-preload-main.js"></script>
+        <link rel="stylesheet" href="/documents/preprocessed-preload-style.css">
+        <link rel="stylesheet" href="/bulma.min.css">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        {{ @component, ./src/components/head.tot }}
+        {{ @component, ./src/components/font.tot }}
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ @data.title }}</title>
+    </head>
+    <body>
+        {{ @component, ./src/components/content-header.tot }}
+        <div class="mainview">
+            <div class="columns">
+                {{ @component, ./src/components/doc-sidebar.tot }}
+                <div class="column">
+                    <section class="section">
+                        <h1 class="title">@preload</h1>
+                        <br/>
+                        <h2 class="subtitle">The place for some Javascript and CSS that need to be at the top of files</h2>
+                        <p>
+                            You need to use <code>require</code> or <code>import</code> at the very first preload.tot.
+                            And Rino will combine and pack them well. Also @preload is used for putting the javascript and css that is shared between pages without HTML.
+                        </p>
+                        <br />
+                        <p>
+                            /src/pages/index.tot:
+                        </p>
+<pre><code><\d:html>
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ @preload, ./src/preloads/preload.tot }}
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ @data.title }}</title>
+    </head>
+    <body>
+        Some content..
+    </body>
+</html>
+<\/d:html>
+<\d:js>
+<\/d:js>
+<\d:css>
+<\/d:css></code></pre>
+                        <br />
+                        <p>
+                            /src/preloads/preload.tot:
+                        </p>
+<pre><code><\d:js>
+const somePackage = require('somePackage');
+<\d:js>
+<\d:css>
+<\/d:css></code></pre>
+                    </section>
+                </div>
+            </div>
+        </div>
+        {{ @component, ./src/components/footer.tot }}
+    </body>
+    </html>
+</d:html>
+<d:css>
+    .merchImg {
+        width: 256px;
+    }
+
+    .mt-3 {
+        margin-top: 6px;
+    }
+
+    .subtitle {
+        font-size: 1.5em;
+    }
+
+    .flexCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainview .section p
+    {
+        font-size: 1.1em;
+    }
+
+    #mainImg {
+        margin: auto;
+    }
+
+    .non-selectable {
+        user-select: none;
+    }
+
+    .ml-4 {
+        margin-left: 8px !important;
+    }
+
+    @media all and (max-width: 620px) {
+        #mainTitle {
+            width: auto;
+            color: #212121;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .mainview .section .title {
+            font-size: 1.4em;
+        }
+
+        .mainview .section .subtitle {
+            font-size: 1.3em;
+        }
+    }
+
+    @media all and (max-width: 300px) {
+        #mainImg {
+            width: 100%;
+        }
+    }
+    
+</d:css>
+<d:js>
+</d:js>

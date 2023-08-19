@@ -1,0 +1,100 @@
+<d:html>
+<div class="column" id="sidebar">
+    <aside class="menu">
+    <p class="menu-label">
+        Getting Started
+    </p>
+    <ul class="menu-list">
+        <li><a href="/documents/introduction.html">Intorduction</a></li>
+        <li><a href="/documents/installation.html">Installation & Setup</a></li>
+        <li><a href="/documents/system.html">System</a></li>
+    </ul>
+    <p class="menu-label">
+        Preprocessed
+    </p>
+    <ul class="menu-list">
+        <li><a href="/documents/preprocessing-api.html">Preprocessing API</a></li>
+        <li><a href="/documents/preprocessed-page.html">Page</a></li>
+        <li><a href="/documents/preprocessed-component.html">@component</a></li>
+        <li><a href="/documents/preprocessed-preload.html">@preload</a></li>
+        <li><a href="/documents/preprocessed-data.html">@data</a></li>
+        <li><a href="/documents/preprocessed-event.html">@events</a></li>
+        <li><a href="/documents/preprocessed-props.html">@props</a></li>
+        <li><a href="/documents/escape.html">Escape</a></li>
+    </ul>
+    <p class="menu-label">
+        Runtime
+    </p>
+    <ul class="menu-list">
+        <li><a href="/documents/component.html">Component</a></li>
+    </ul>
+    </aside>
+</div>
+<div id="cover" @click="showMenu()">
+</div>
+</d:html>
+<d:js>
+async function showMenu()
+{
+    const sidebar = document.getElementById("sidebar");
+    const sidebarCover = document.getElementById("cover");
+
+    if(sidebar.classList.contains("block"))
+    {
+        sidebar.classList.remove("block");
+        sidebarCover.classList.remove("block");
+    }
+    else
+    {
+        sidebar.classList.add("block");
+        sidebarCover.classList.add("block");
+    }
+}
+</d:js>
+<d:css>
+.block {
+    display: block !important;
+}
+
+#cover {
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.7;
+    position: fixed;
+    z-index: 9997;
+}
+
+#sidebar {
+    height: calc(100vh - 20px);
+    min-width: 300px;
+    max-width: 300px;
+    padding: 0px;
+    overflow-y: auto !important;
+}
+
+.menu {
+    padding: 20px;
+    min-height: 100%;
+}
+
+@media all and (max-width: 940px) {
+    #sidebar {
+        min-width: 0px;
+        display: none;
+        position: fixed;
+        z-index: 9998;
+        background-color: #fff;
+        border-right: 1px solid #ddd;
+    }
+}
+
+@media all and (min-width: 940px) {  
+    #cover {
+        display: none !important;
+    }
+}
+</d:css>

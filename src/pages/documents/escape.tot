@@ -1,0 +1,111 @@
+<d:html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        {{ @preload, ./src/preloads/preload.tot }}
+        {{ @preload, ./src/preloads/onload.tot }}
+        {{ @preload, ./src/preloads/doc.tot }}
+        <script type="text/javascript" src="/documents/escape-main.js"></script>
+        <link rel="stylesheet" href="/documents/escape-style.css">
+        <link rel="stylesheet" href="/bulma.min.css">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        {{ @component, ./src/components/head.tot }}
+        {{ @component, ./src/components/font.tot }}
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ @data.title }}</title>
+    </head>
+    <body>
+        {{ @component, ./src/components/content-header.tot }}
+        <div class="mainview">
+            <div class="columns">
+                {{ @component, ./src/components/doc-sidebar.tot }}
+                <div class="column">
+                    <section class="section">
+                        <h1 class="title">Escape</h1>
+                        <br/>
+                        <h2 class="subtitle">We got to escape some cases...</h2>
+                        <p>
+                            The most common example:
+                        </p>
+<pre><code><d:something> or </d:something></code></pre>
+                        <br />
+                        <p>
+                            Rino use Tot format so you can also try <code>'<' + '\' + 'd:something>'</code>
+                            You can use HTML entries as well. Rino convert things between <code><code>< /code></code> for now.
+                            But it is not perfect and it may be removed in the future.
+                        </p>
+                        <br />
+                    </section>
+                </div>
+            </div>
+        </div>
+        {{ @component, ./src/components/footer.tot }}
+    </body>
+    </html>
+</d:html>
+<d:css>
+    .merchImg {
+        width: 256px;
+    }
+
+    .mt-3 {
+        margin-top: 6px;
+    }
+
+    .subtitle {
+        font-size: 1.5em;
+    }
+
+    .flexCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainview .section p
+    {
+        font-size: 1.1em;
+    }
+
+    #mainImg {
+        margin: auto;
+    }
+
+    .non-selectable {
+        user-select: none;
+    }
+
+    .ml-4 {
+        margin-left: 8px !important;
+    }
+
+    @media all and (max-width: 620px) {
+        #mainTitle {
+            width: auto;
+            color: #212121;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .mainview .section .title {
+            font-size: 1.4em;
+        }
+
+        .mainview .section .subtitle {
+            font-size: 1.3em;
+        }
+    }
+
+    @media all and (max-width: 300px) {
+        #mainImg {
+            width: 100%;
+        }
+    }
+    
+</d:css>
+<d:js>
+</d:js>

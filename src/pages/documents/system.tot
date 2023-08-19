@@ -1,0 +1,117 @@
+<d:html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        {{ @preload, ./src/preloads/preload.tot }}
+        {{ @preload, ./src/preloads/onload.tot }}
+        {{ @preload, ./src/preloads/doc.tot }}
+        <script type="text/javascript" src="/documents/system-main.js"></script>
+        <link rel="stylesheet" href="/documents/system-style.css">
+        <link rel="stylesheet" href="/bulma.min.css">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        {{ @component, ./src/components/head.tot }}
+        {{ @component, ./src/components/font.tot }}
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ @data.title }}</title>
+    </head>
+    <body>
+        {{ @component, ./src/components/content-header.tot }}
+        <div class="mainview">
+            <div class="columns">
+                {{ @component, ./src/components/doc-sidebar.tot }}
+                <div class="column">
+                    <section class="section">
+                        <h1 class="title">System of Rino</h1>
+                        <br/>
+                        <h2 class="subtitle">Whole Structure</h2>
+                        <pre><code>Preprocessing pages -> Javascript running on client side page</code></pre>
+                        <br />
+                        <p>
+                            Instead of processing everything in the webpage.
+                            It is more efficient that we divide them into the things that need to be preprocessed and running from client side.
+                        </p>
+                        <br />
+                        <br />
+                        <h2 class="subtitle">Preprocessing strucutre</h2>
+                        <pre><code>preloads + components + other Javascript/CSS from preprocessed components and pages</code></pre>
+                        <br />
+                        <p>
+                            Rino preprocess files based on syntax in <code><\d:html><\/d:html></code>.
+                            And preprocessing system follows the order of where they are placed in general.
+                            Preload files will be placed at the top of the javascript and css files.
+                            Then components for client side will be placed. The last part will be the preprocessed components and pages.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        {{ @component, ./src/components/footer.tot }}
+    </body>
+    </html>
+</d:html>
+<d:css>
+    .merchImg {
+        width: 256px;
+    }
+
+    .mt-3 {
+        margin-top: 6px;
+    }
+
+    .subtitle {
+        font-size: 1.5em;
+    }
+
+    .flexCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainview .section p
+    {
+        font-size: 1.1em;
+    }
+
+    #mainImg {
+        margin: auto;
+    }
+
+    .non-selectable {
+        user-select: none;
+    }
+
+    .ml-4 {
+        margin-left: 8px !important;
+    }
+
+    @media all and (max-width: 620px) {
+        #mainTitle {
+            width: auto;
+            color: #212121;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .mainview .section .title {
+            font-size: 1.4em;
+        }
+
+        .mainview .section .subtitle {
+            font-size: 1.3em;
+        }
+    }
+
+    @media all and (max-width: 300px) {
+        #mainImg {
+            width: 100%;
+        }
+    }
+    
+</d:css>
+<d:js>
+</d:js>

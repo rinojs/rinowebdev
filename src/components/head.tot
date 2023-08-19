@@ -1,0 +1,12 @@
+<d:html>
+<meta name="description" content="{{ @data.desc }}" />
+<meta name="og:site_name" content="Rino.js" />
+<meta name="og:title" content="{{ @data.title }}" />
+<meta name="og:description" content="{{ @data.desc }}" />
+<meta name="og:url" content="https://rinojs.org/{{ @data.url }}" />
+<meta name="og:image" content="/assets/rino256.png"/>
+</d:html>
+<d:js>
+</d:js>
+<d:css>
+</d:css>

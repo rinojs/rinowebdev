@@ -1,0 +1,170 @@
+<d:html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        {{ @preload, ./src/preloads/preload.tot }}
+        {{ @preload, ./src/preloads/onload.tot }}
+        <script type="text/javascript" src="sponsor-main.js"></script>
+        <link rel="stylesheet" href="sponsor-style.css">
+        <link rel="stylesheet" href="bulma.min.css">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        {{ @component, ./src/components/head.tot }}
+        {{ @component, ./src/components/font.tot }}
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ @data.title }}</title>
+    </head>
+    <body>
+        {{ @component, ./src/components/header.tot }}
+        <div class="mainview">
+            <section class="section">
+                <div id="mainTitle">
+                    <img id="mainImg" src="/assets/rino256.png">
+                    <h1 class="title">Rino Sponsor</h1>
+                    <h2 class="subtitle">Become a sponsor and support us</h2>
+                    <button class="button is-info" @click="window.open('https://github.com/sponsors/opdev1004');">Github Sponsors</button>
+                    <button class="button is-info" @click="window.open('https://ko-fi.com/opdev1004');">Ko-fi</button>
+                </div>
+            </section>
+            <section class="section">
+                <h1 class="title">🔥 Immortal Supporter</h1>
+                <h2 class="subtitle">
+                    $4,000 a month
+                </h2>
+                <p>Send an email to <code>geargom1004@gmail.com</code> before your purchase so you make sure that you can be placed.</p>
+                <br />
+                <p>- Pick one project that you want to list your image(400px x 100px) at the immortal Supporter in README file and front page and top of main content of project website.</p>
+                <p>- Top of main content of project website will be randomly showing.</p>
+                <p>- Limited to 5 present companies or individuals</p>
+                <br />
+                <br />
+                <h1 class="title">👼 Divine Supporter</h1>
+                <h2 class="subtitle">
+                    $2,000 a month
+                </h2>
+                <p>- Pick one project that you want to place your banner image(240px x 80px) at the Divine Supporter in README file and front page and sidebar of project website.</p>
+                <br />
+                <br />
+                <h1 class="title">🎻 Ancient Supporter</h1>
+                <h2 class="subtitle">
+                    $250 a month
+                </h2>
+                <p>- Pick one project that you want to list your logo(120px x 40px) at the Ancient Supporter in README file and front page of project website.</p>
+                <br />
+                <br />
+                <h1 class="title">⚔ Legend Supporter</h1>
+                <h2 class="subtitle">
+                    $100 a month
+                </h2>
+                <p>- Pick one project that you want to list your logo(40px x 40px) at the Legend Supporter in README file and front page of project website.</p>
+                <br />
+                <br />
+                <h1 class="title">🌲 Archon Supporter</h1>
+                <h2 class="subtitle">
+                    $50 a month
+                </h2>
+                <p>- Pick one project that you want to list your name at the Archon Supporter in README or SUPPORTER file.</p>
+                <p><strong>- YOUR NAME WILL BE CAPITALIZED AND STRONG LIKE THIS</strong></p>
+                <br />
+                <br />
+                <h1 class="title">🍀 Crusader Supporter</h1>
+                <h2 class="subtitle">
+                    $25 a month
+                </h2>
+                <p>- Pick one project that you want to list your name at the Crusader Supporter in README or SUPPORTER file.</p>
+                <br />
+                <br />
+                <h1 class="title">☘ Guardian Supporter</h1>
+                <h2 class="subtitle">
+                    $15 a month
+                </h2>
+                <p>- Pick one project that you want to list your name at the Guardian Supporter in README or SUPPORTER file.</p>
+                <br />
+                <br />
+                <h1 class="title">🌱 Herald Supporter</h1>
+                <h2 class="subtitle">
+                    $5 a month
+                </h2>
+                <p>- Pick one project that you want to list your name at the Herald Supporter in README or SUPPORTER file.</p>
+            </section>
+        </div>
+        {{ @component, ./src/components/footer.tot }}
+    </body>
+    </html>
+</d:html>
+<d:css>
+.merchImg {
+    width: 256px;
+}
+
+.mt-3 {
+    margin-top: 6px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
+
+.mainview .section p
+{
+    font-size: 1.1em;
+}
+
+#mainTitle {
+    width: 600px;
+    margin: 50px auto;
+    color: #212121;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+#mainTitle h1 {
+    font-size: 1.4em;
+    width: 100%;
+}
+
+#mainTitle h2 {
+    font-size: 1em;
+}
+
+#mainImg {
+    margin: auto;
+}
+
+.non-selectable {
+    user-select: none;
+}
+
+.ml-4 {
+    margin-left: 8px !important;
+}
+
+@media all and (max-width: 620px) {
+    #mainTitle {
+        width: auto;
+        color: #212121;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .mainview .section .title {
+        font-size: 1.4em;
+    }
+
+    .mainview .section .subtitle {
+        font-size: 1.3em;
+    }
+}
+
+@media all and (max-width: 300px) {
+    #mainImg {
+        width: 100%;
+    }
+}
+</d:css>
+<d:js>
+</d:js>
