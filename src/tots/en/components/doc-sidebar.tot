@@ -1,0 +1,36 @@
+<d:sidebar>
+<p class="menu-label">
+    Getting Started
+</p>
+<ul class="menu-list">
+    <li><a href="/documents/introduction.html">Intorduction</a></li>
+    <li><a href="/documents/installation.html">Installation & Setup</a></li>
+    <li><a href="/documents/system.html">System</a></li>
+</ul>
+<p class="menu-label">
+    Preprocessed
+</p>
+<ul class="menu-list">
+    <li><a href="/documents/preprocessed-page.html">Page</a></li>
+    <li><a href="/documents/preprocessed-component.html">@component</a></li>
+    <li><a href="/documents/preprocessed-preload.html">@preload</a></li>
+    <li><a href="/documents/preprocessed-data.html">@data</a></li>
+    <li><a href="/documents/preprocessed-tot.html">@tot</a></li>
+    <li><a href="/documents/preprocessed-md.html">@md</a></li>
+    <li><a href="/documents/preprocessed-event.html">@events</a></li>
+    <li><a href="/documents/preprocessed-props.html">@props</a></li>
+    <li><a href="/documents/escape.html">Escape</a></li>
+</ul>
+<p class="menu-label">
+    Runtime
+</p>
+<ul class="menu-list">
+    <li><a href="/documents/component.html">Component</a></li>
+</ul>
+<p class="menu-label">
+    Extras
+</p>
+<ul class="menu-list">
+    <li><a href="/documents/preprocessing-api.html">Preprocessing API</a></li>
+</ul>
+</d:sidebar>

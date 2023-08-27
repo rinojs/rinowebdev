@@ -1,10 +1,10 @@
 {
   "name": "rinowebdev",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Rino.js Website",
   "main": "src/index.js",
   "scripts": {
-    "build": "node src/index.js"
+    "dev": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/rinojs/rinowebdev#readme",
   "dependencies": {
-    "rinojs": "^1.0.1"
+    "rinojs": "^1.4.0"
   }
 }

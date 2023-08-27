@@ -7,7 +7,6 @@
         {{ @preload, ./src/preloads/doc.tot }}
         <script type="text/javascript" src="/documents/preprocessed-component-main.js"></script>
         <link rel="stylesheet" href="/documents/preprocessed-component-style.css">
-        <link rel="stylesheet" href="/bulma.min.css">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
         {{ @component, ./src/components/font.tot }}
@@ -24,41 +23,7 @@
                 {{ @component, ./src/components/doc-sidebar.tot }}
                 <div class="column">
                     <section class="section">
-                        <h1 class="title">@component</h1>
-                        <br/>
-                        <h2 class="subtitle">Preprocessed component</h2>
-                        <p>Anything that is preprocessed start with <code>@</code></p>
-                        <br/>
-                        <p>
-                            ./src/components/sometest.tot
-                        </p>
-<pre><code>// @component' indicates that it should be preprocessed component
-//./src/pcomponents/test.tot' is file path of where component file is
-
-<\d:html>
-some html...
-{{ @component, ./src/pcomponents/test.tot }}
-some html...
-<\/d:html></code></pre>
-                        <br />
-                        <p>
-                            ./src/components/test.tot
-                        </p>
-<pre><code><\d:html>
-<div>
-test
-</div>
-<\/d:html></code></pre>
-                        <br />
-                        <p>
-                            Result
-                        </p>
-<pre><code>some html...
-<div>
-test
-</div>
-some html...</code></pre>
-                        <br />
+                        {{ @data.md.content }}
                     </section>
                 </div>
             </div>

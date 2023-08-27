@@ -6,7 +6,6 @@
         {{ @preload, ./src/preloads/onload.tot }}
         <script type="text/javascript" src="main.js"></script>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="bulma.min.css">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
         {{ @component, ./src/components/font.tot }}
@@ -22,67 +21,25 @@
             <section class="section">
                 <div id="mainTitle">
                     <img id="mainImg" src="/assets/rino256.png">
-                    <h1 class="title">Rino.js</h1>
-                    <h2 class="subtitle">Fast learning, preprocessing, intuitive web framework</h2>
-                    <button class="button is-success" @click="location.assign('/documents/introduction.html');">Document</button>
-                    <button class="button is-info" @click="location.assign('/sponsor.html');">Sponsor</button>
-                    <button class="button is-danger" @click="location.assign('/shop.html');">Shop</button>
+                    {{ @data.tot.content.maintitle }}
                 </div>
-                <div><pre><code>npm i rinojs</code></pre></div>
+                {{ @md, ./src/mds/ncr.md }}
+                <br />
+                {{ @data.tot.content.installation }}
+                <br />
+                <br />
+                {{ @md, ./src/mds/nir.md }}
             </section>
             <section class="section">
                 <div class="columns">
-                    <div class="column">
-                        <h1 class="title">Easy</h1>
-                        <p>
-                            Just common learnings that front-end developers do.
-                            Standard HTML, CSS, Javascript and Node.js and preprocessing system.
-                            We don't need to waste our time and it just works.
-                        </p>
-                    </div>
-                    <div class="column">
-                        <h1 class="title">Performant</h1>
-                        <p>
-                            No virtual dom, smaller files, reusable components with full control over the pages.
-                            Standard SEO, standard web setup, no more problems with static site generation
-                        </p>
-                    </div>
-                    <div class="column">
-                        <h1 class="title">Freedom</h1>
-                        <p>
-                            Use libraries you like.
-                            Manage your important state in local storage.
-                            And store the others in variables.
-                            Create and use what you like.
-                        </p>
-                    </div>
+                    {{ @data.tot.content.rinopros }}
                 </div>
             </section>
             <section class="section">
-                <h1 class="title">Sponsors</h1>
-                <h2 class="subtitle">
-                    Become a monthly sponsor and put your image and name here!
-                </h2>
-                <p>Have a look at our <a href="/sponsor.html">sponsor</a> page for details.</p>
-                <br />
-                <br />
-                <h1 class="title">🔥 Immortal Supporter</h1>
-                <h1 class="title">👼 Divine Supporter</h1>
-                <h1 class="title">🎻 Ancient Supporter</h1>
-                <h1 class="title">⚔ Legend Supporter</h1>
-                <h1 class="title">🌲 Archon Supporter</h1>
-                <h1 class="title">🍀 Crusader Supporter</h1>
-                <h1 class="title">☘ Guardian Supporter</h1>
-                <h1 class="title">🌱 Herald Supporter</h1>
+                {{ @data.tot.content.sponsors }}
             </section>
             <section class="section">
-                <h1 class="title">Shop</h1>
-                <button class="button is-primary" @click="window.open('https://www.redbubble.com/shop/ap/149559711');">RB Rino Shop</button>
-                <button class="button is-primary" @click="window.open('https://www.redbubble.com/people/Geargom/shop');">RB Geargom Shop</button>
-                <h2 class="subtitle mt-3">
-                    Your purchase from Rino design or Geargom shop will help us to continue our projects for software, game and designs.
-                    We are receiving roughly 20~30% from the whole price.
-                </h2>
+                {{ @data.tot.content.shop }}
                 <div class="columns">
                     <img class="column merchImg" src="/assets/rino_bucket_hat.jpg">
                     <img class="column merchImg" src="/assets/rino_backpack.jpg">

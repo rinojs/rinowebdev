@@ -7,7 +7,6 @@
         {{ @preload, ./src/preloads/doc.tot }}
         <script type="text/javascript" src="/documents/escape-main.js"></script>
         <link rel="stylesheet" href="/documents/escape-style.css">
-        <link rel="stylesheet" href="/bulma.min.css">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
         {{ @component, ./src/components/font.tot }}
@@ -24,20 +23,7 @@
                 {{ @component, ./src/components/doc-sidebar.tot }}
                 <div class="column">
                     <section class="section">
-                        <h1 class="title">Escape</h1>
-                        <br/>
-                        <h2 class="subtitle">We got to escape some cases...</h2>
-                        <p>
-                            The most common example:
-                        </p>
-<pre><code><d:something> or </d:something></code></pre>
-                        <br />
-                        <p>
-                            Rino use Tot format so you can also try <code>'<' + '\' + 'd:something>'</code>
-                            You can use HTML entries as well. Rino convert things between <code><code>< /code></code> for now.
-                            But it is not perfect and it may be removed in the future.
-                        </p>
-                        <br />
+                        {{ @data.md.content }}
                     </section>
                 </div>
             </div>
