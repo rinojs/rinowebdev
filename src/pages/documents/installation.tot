@@ -7,7 +7,6 @@
         {{ @preload, ./src/preloads/doc.tot }}
         <script type="text/javascript" src="/documents/installation-main.js"></script>
         <link rel="stylesheet" href="/documents/installation-style.css">
-        <link rel="stylesheet" href="/bulma.min.css">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
         {{ @component, ./src/components/font.tot }}
@@ -24,106 +23,7 @@
                 {{ @component, ./src/components/doc-sidebar.tot }}
                 <div class="column">
                     <section class="section">
-                        <h1 class="title">Installation & Setup</h1>
-                        <br/>
-                        <h2 class="subtitle">Install Rino with NPM</h2>
-                        <pre><code>npm i rinojs</code></pre>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">Setting up your project</h2>
-                        <p>
-                            It is totally up to you how you setup your project. But I recommend that you put everything well organized.
-                            Recommended directory structure is:
-                        </p>
-                        <br />
-<pre><code>Project/src/index.js
-// pages.js for multiple pages
-Project/src/pages.js
-Project/src/pages/
-Project/src/components/
-Project/src/pcomponents/
-Project/src/preloads/
-Project/public/
-Project/dist/</code></pre>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">Quick start with multiple pages</h2>
-                        <p>
-                            /src/index.js is the file that you can manage how you want to preprocessing tot files. It is quite simpler than it seems.
-                            Please have a look at the <a href="/documents/preprocessing-api.html">api</a> document for more detail about the functions of Rino.
-                        </p>
-                        <br />
-                        <p>
-                            /src/index.js for multiple pages:
-                        </p>
-<pre><code>const Rino = require('rinojs');
-const path = require('path');
-const pages = require('./pages');
-
-async function main()
-{
-    let rino = new Rino();
-
-    let args = {
-        pages: pages,
-        root: path.resolve(__dirname, "../dist/"),
-        projectDirname: path.resolve(__dirname, "./")
-    }
-
-    await rino.dev(args);
-}
-
-main();</code></pre>
-                        <p>
-                            /src/pages.js:
-                        </p>
-<pre><code>const path = require('path');
-
-module.exports = [
-    {
-        data: { title: "Test" },
-        pageFilename: path.resolve(__dirname, "./pages/index.tot"),
-        distDirname: path.resolve(__dirname, "../dist/"),
-        filenames: {
-            html: "index.html",
-            css: "style.css",
-            js: "main.js"
-        }
-    }
-]</code></pre>
-                        <p>
-                            /src/pages/index.tot:
-                        </p>
-<pre><code><\d:html>
-<!DOCTYPE html>
-<html>
-    <head>
-        <script type="text/javascript" src="main.js"></script>
-        <link rel="stylesheet" href="style.css">
-
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ @data.title }}</title>
-    </head>
-    <body>
-        Some content..
-    </body>
-</html>
-<\/d:html>
-<\d:js>
-<\/d:js>
-<\d:css>
-<\/d:css></code></pre>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">External CSS, Javascript and assets</h2>
-                        <p>
-                            You can place your external files into your dist directory where your built project will be placed.
-                            I am planning to make Rino to copy things in public directory to the dist directory in the future.
-                            So after the update that I make, you should place them in public directory.
-                            Current version does not support that so you can just manually add them into the /dist diriectory.
-                        </p>
+                        {{ @data.md.content }}
                     </section>
                 </div>
             </div>

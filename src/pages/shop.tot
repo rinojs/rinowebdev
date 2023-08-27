@@ -6,7 +6,6 @@
         {{ @preload, ./src/preloads/onload.tot }}
         <script type="text/javascript" src="shop-main.js"></script>
         <link rel="stylesheet" href="shop-style.css">
-        <link rel="stylesheet" href="bulma.min.css">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
         {{ @component, ./src/components/font.tot }}
@@ -22,15 +21,9 @@
             <section class="section">
                 <div id="mainTitle">
                     <img id="mainImg" src="/assets/rino256.png">
-                    <h1 class="title">Rino.js Shop</h1>
-                    <h2 class="subtitle">Another way to support us</h2>
-                    <button class="button is-danger" @click="window.open('https://www.redbubble.com/shop/ap/149559711');">RB Rino Shop</button>
-                    <button class="button is-danger" @click="window.open('https://www.redbubble.com/people/Geargom/shop');">RB Geargom Shop</button>
+                    {{ @data.tot.content.maintitle }}
                 </div>
-                <h2 class="subtitle mt-3">
-                    Your purchase from Rino Shop or Geargom shop will help us to continue our projects for software, game and designs.
-                    We are receiving roughly 20~30% from the whole price.
-                </h2>
+                {{ @data.tot.content.description }}
                 <div class="columns">
                     <img class="column merchImg" src="/assets/rino_bucket_hat.jpg">
                     <img class="column merchImg" src="/assets/rino_backpack.jpg">

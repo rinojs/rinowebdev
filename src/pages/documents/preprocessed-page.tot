@@ -7,7 +7,6 @@
         {{ @preload, ./src/preloads/doc.tot }}
         <script type="text/javascript" src="/documents/preprocessed-page-main.js"></script>
         <link rel="stylesheet" href="/documents/preprocessed-page-style.css">
-        <link rel="stylesheet" href="/bulma.min.css">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
         {{ @component, ./src/components/font.tot }}
@@ -24,42 +23,7 @@
                 {{ @component, ./src/components/doc-sidebar.tot }}
                 <div class="column">
                     <section class="section">
-                        <h1 class="title">Page</h1>
-                        <br/>
-                        <h2 class="subtitle">Where preprocessing begins..</h2>
-                        <p>
-                            /src/pages/somepage.tot:
-                        </p>
-<pre><code><\d:html>
-<!DOCTYPE html>
-<html>
-    <head>
-        <script type="text/javascript" src="main.js"></script>
-        <link rel="stylesheet" href="style.css">
-
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ @data.title }}</title>
-    </head>
-    <body>
-        Some content..
-    </body>
-</html>
-<\/d:html>
-<\d:js>
-<\/d:js>
-<\d:css>
-<\/d:css></code></pre>
-                        <br />
-                        <p>
-                            You use Rino's <a href="/documents/preprocessing-api.html">Preprocessing API</a> to preprocess the page.
-                            The preprocessing system will go through each preprocessing syntax and combine HTML, Javascript and CSS.
-                        </p>
-                        <br />
-                        <p>
-                            We are using <a href="https://github.com/opdev1004/totjs">Tot format</a> for files.
-                        </p>
+                        {{ @data.md.content }}
                     </section>
                 </div>
             </div>

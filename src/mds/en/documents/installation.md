@@ -1,0 +1,19 @@
+# Installation & Setup
+
+## Start your Rino project with template!
+
+```
+npm create rino
+```
+
+## Or install Rino with NPM
+
+```
+npm i rinojs
+```
+
+## About setting up
+
+In case of npm create rino, the fundamental things that you need for SSG (Static Site Generation) is ready. You can add or update pages and components. More templates will be added later. And you are going to be able to select the options from npm create rino.
+
+In case of npm i rinojs, you are setting up things yourself. Especially when you want to do SSR (Server Side Rendering). Everything is ready and you just need to design and build what you want. Maybe we can have a default template for this in the future. And we can just npm create rino for everything.

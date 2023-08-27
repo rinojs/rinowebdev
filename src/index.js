@@ -1,18 +1,19 @@
 const Rino = require('rinojs');
 const path = require('path');
-const pages = require('./pages');
+const { pages } = require("./pages.js");
 
-async function build()
+async function dev()
 {
     let rino = new Rino();
 
     let args = {
-        pages: pages,
-        root: path.resolve(__dirname, "../public/"),
-        projectDirname: path.resolve(__dirname, "./")
+        pages: await pages(),
+        distRoot: path.resolve(__dirname, "../dist/"),
+        src: path.resolve(__dirname, "./"),
+        publicDirname: path.resolve(__dirname, "../public/")
     }
 
     await rino.dev(args);
 }
 
-build();
+dev();

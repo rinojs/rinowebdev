@@ -1,0 +1,12 @@
+<d:maintitle>
+                    <h1 class="title">Rino.js 상점</h1>
+                    <h2 class="subtitle">우리를 돕는 또 다른 방법</h2>
+                    <button class="button is-danger" @click="window.open('https://www.redbubble.com/shop/ap/149559711');">RB 리노 상점</button>
+                    <button class="button is-danger" @click="window.open('https://www.redbubble.com/people/Geargom/shop');">RB 기어곰 상점</button>
+</d:maintitle>
+<d:description>
+                <h2 class="subtitle mt-3">
+                    리노 상점이나 Geargom 상점에서 구매하시면 소프트웨어, 게임, 디자인 프로젝트를 계속하는데 도움이 됩니다.
+                    우리는 전체 가격의 20~30% 정도를 받고 있습니다.
+                </h2>
+</d:description>

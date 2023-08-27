@@ -7,7 +7,6 @@
         {{ @preload, ./src/preloads/doc.tot }}
         <script type="text/javascript" src="/documents/preprocessed-data-main.js"></script>
         <link rel="stylesheet" href="/documents/preprocessed-data-style.css">
-        <link rel="stylesheet" href="/bulma.min.css">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
         {{ @component, ./src/components/font.tot }}
@@ -24,67 +23,7 @@
                 {{ @component, ./src/components/doc-sidebar.tot }}
                 <div class="column">
                     <section class="section">
-                        <h1 class="title">@data</h1>
-                        <br/>
-                        <h2 class="subtitle">Data for preprocessing</h2>
-                        <p>
-                            index.js or pages.js:
-                        </p>
-                        <pre><code>data: { title: "Some title" }</code></pre>
-                        <br />
-                        <p>
-                            Some .tot file:
-                        </p>
-                        <pre><code>{{ @data.title }}</code></pre>
-                        <br />
-                        <p>
-                            Data is useful as you can also read a file and pass that to be preprocessed.
-                        </p>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">Example:</h2>
-                        <p>
-                            /src/pages.js:
-                        </p>
-<pre><code>const path = require('path');
-
-module.exports = [
-    {
-        data: { title: "Test" },
-        pageFilename: path.resolve(__dirname, "./pages/index.tot"),
-        distDirname: path.resolve(__dirname, "../dist/"),
-        filenames: {
-            html: "index.html",
-            css: "style.css",
-            js: "main.js"
-        }
-    }
-]</code></pre>
-                        <p>
-                            /src/pages/index.tot:
-                        </p>
-<pre><code><\d:html>
-<!DOCTYPE html>
-<html>
-    <head>
-        {{ @preload, ./src/preloads/preload.tot }}
-        <script type="text/javascript" src="main.js"></script>
-        <link rel="stylesheet" href="style.css">
-
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ @data.title }}</title>
-    </head>
-    <body>
-        Some content..
-    </body>
-</html>
-<\/d:html>
-<\d:js>
-<\/d:js>
-<\d:css>
-<\/d:css></code></pre>
+                        {{ @data.md.content }}
                     </section>
                 </div>
             </div>

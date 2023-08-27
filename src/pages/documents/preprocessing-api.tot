@@ -7,7 +7,6 @@
         {{ @preload, ./src/preloads/doc.tot }}
         <script type="text/javascript" src="/documents/preprocessing-api-main.js"></script>
         <link rel="stylesheet" href="/documents/preprocessing-api-style.css">
-        <link rel="stylesheet" href="/bulma.min.css">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
         {{ @component, ./src/components/font.tot }}
@@ -24,136 +23,7 @@
                 {{ @component, ./src/components/doc-sidebar.tot }}
                 <div class="column">
                     <section class="section">
-                        <h1 class="title">Preprocessing API</h1>
-                        <br/>
-                        <h2 class="subtitle">rino.dev()</h2>
-                        <p>
-                            This is a function for development. We officially recommend to use this. This will build multiple pages and run development server.
-                            This function may change in the future. Because we are going to enhence how it handle pages.js.
-                            So pages might be relative path to pages.js in the future or being removed as Rino automatically search the file.
-                        </p>
-                        <br />
-<pre><code>dev()
-arguments: args
-args: {
-    pages:[
-        {
-            data: `json data for injecting to the html, css and javascript`,
-            pageFilename: `File name for the page, strting .tot file.`,
-            distDirname: `This is the directory where the output files will be stored.`,
-            filenames: {
-                html: `filename for html, default is /index.html`,
-                css: `filename for css, default is /style.css`,
-                js: `filename for js, default is /main.js`
-            }
-        }, ... pages continue
-    ],
-    root: `This is the directory of root where the output files will be stored.`,
-    projectDirname: `Where your project files are. src directory path. This is for checking changes.`
-}</code></pre>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">rino.build()</h2>
-                        <p>
-                            This is a function for building a single page.
-                        </p>
-                        <br />
-<pre><code>build()
-arguments: args
-args: {
-    data: `json data for injecting to the html, css and javascript`,
-    pageFilename: `File name for the page, strting .tot file.`,
-    distDirname: `This is the directory where the output files will be stored.`,
-    filenames: {
-        html: `filename for html, default is /index.html`,
-        css: `filename for css, default is /style.css`,
-        js: `filename for js, default is /main.js`
-    }
-}</code></pre>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">rino.buildMultiple()</h2>
-                        <p>
-                            This is a function for building multiple pages.
-                        </p>
-                        <br />
-<pre><code>buildMultiple()
-arguments: pages
-pages:[
-    {
-        data: `json data for injecting to the html, css and javascript`,
-        pageFilename: `File name for the page, strting .tot file.`,
-        distDirname: `This is the directory where the output files will be stored.`,
-        filenames: {
-            html: `filename for html, default is /index.html`,
-            css: `filename for css, default is /style.css`,
-            js: `filename for js, default is /main.js`
-        }
-    }, ... pages continue
-]</code></pre>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">rino.buildPage()</h2>
-                        <p>
-                            This is a function for building a page. This does not write files.
-                        </p>
-                        <br />
-<pre><code>buildPage()
-arguments: args
-args: {
-    filename: `File name for the page, strting .tot file path.`,
-    data: `json data for injecting to the html, css and javascript`,
-}</code></pre>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">rino.buildPComponent()</h2>
-                        <p>
-                            This is a function for building a preprocessed component.
-                        </p>
-                        <br />
-<pre><code>buildPComponent()
-arguments: args
-args: {
-    filename: `This is the file path of tot file.`,
-    data: `json data for injecting to the html, css and javascript`,
-    props: properties that is passed from the parent.
-}</code></pre>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">rino.buildComponent()</h2>
-                        <p>
-                            This is a function for building a component. This may change in the future.
-                            Because we are planning to improve it.
-                        </p>
-                        <br />
-<pre><code>buildComponent()
-arguments: args
-args: {
-    filename: `This is the file path of tot file.`,
-    data: `json data for injecting to the html, css and javascript`,
-    props: `properties that is passed from the parent.`,
-    htmlName: `Name of the variable for html content.`,
-}</code></pre>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">rino.writeFiles()</h2>
-                        <p>
-                            This is a function for writing files.
-                        </p>
-                        <br />
-<pre><code>writeFiles()
-arguments:
-dirname: `This is the directory where the output files will be stored.`,
-obj: {
-    html: `html content`,
-    css: `css content`,
-    js: `js content`
-},
-filenames: {
-    html: `filename for html, default is /index.html`,
-    css: `filename for css, default is /style.css`,
-    js: `filename for js, default is /main.js`
-}</code></pre>
+                        {{ @data.md.content }}
                     </section>
                 </div>
             </div>

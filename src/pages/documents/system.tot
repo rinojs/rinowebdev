@@ -7,7 +7,6 @@
         {{ @preload, ./src/preloads/doc.tot }}
         <script type="text/javascript" src="/documents/system-main.js"></script>
         <link rel="stylesheet" href="/documents/system-style.css">
-        <link rel="stylesheet" href="/bulma.min.css">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
         {{ @component, ./src/components/font.tot }}
@@ -24,26 +23,7 @@
                 {{ @component, ./src/components/doc-sidebar.tot }}
                 <div class="column">
                     <section class="section">
-                        <h1 class="title">System of Rino</h1>
-                        <br/>
-                        <h2 class="subtitle">Whole Structure</h2>
-                        <pre><code>Preprocessing pages -> Javascript running on client side page</code></pre>
-                        <br />
-                        <p>
-                            Instead of processing everything in the webpage.
-                            It is more efficient that we divide them into the things that need to be preprocessed and running from client side.
-                        </p>
-                        <br />
-                        <br />
-                        <h2 class="subtitle">Preprocessing strucutre</h2>
-                        <pre><code>preloads + components + other Javascript/CSS from preprocessed components and pages</code></pre>
-                        <br />
-                        <p>
-                            Rino preprocess files based on syntax in <code><\d:html><\/d:html></code>.
-                            And preprocessing system follows the order of where they are placed in general.
-                            Preload files will be placed at the top of the javascript and css files.
-                            Then components for client side will be placed. The last part will be the preprocessed components and pages.
-                        </p>
+                        {{ @data.md.content }}
                     </section>
                 </div>
             </div>

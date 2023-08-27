@@ -1,10 +1,12 @@
 <d:html>
+<link rel="stylesheet" href="/bulma.min.css">
 <meta name="description" content="{{ @data.desc }}" />
 <meta name="og:site_name" content="Rino.js" />
 <meta name="og:title" content="{{ @data.title }}" />
 <meta name="og:description" content="{{ @data.desc }}" />
 <meta name="og:url" content="https://rinojs.org/{{ @data.url }}" />
 <meta name="og:image" content="/assets/rino256.png"/>
+<meta name="naver-site-verification" content="0e2b53e8888e0e7cad3c37284482aa13ec402c44" />
 </d:html>
 <d:js>
 </d:js>
