@@ -6,7 +6,6 @@
         {{ @preload, ./src/preloads/onload.tot }}
         <script type="text/javascript" src="sponsor-main.js"></script>
         <link rel="stylesheet" href="sponsor-style.css">
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
         {{ @component, ./src/components/font.tot }}
 

@@ -64,6 +64,6 @@ It is totally up to you how you setup your project. But it is recommended to put
 
 ## Extra stuffs
 
-Anything that is preprocessed start with `@`. Runtime component is also actually preprocessed as well, but it is just a rule for where they are more being used to build a page. This rule has made because we are going to support runtime tools in the future.
+Anything that is preprocessed start with `@`. Runtime component is also actually preprocessed as well, but it is just a rule for where they are more used for building a page. This rule has made because we are going to support runtime tools in the future.
 
 It is good to understand [Tot](https://github.com/opdev1004/totjs). Because you can do many things with it. Tot is a good IO handler.
