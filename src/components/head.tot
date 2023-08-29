@@ -7,6 +7,7 @@
 <meta name="og:url" content="https://rinojs.org/{{ @data.url }}" />
 <meta name="og:image" content="/assets/rino256.png"/>
 <meta name="naver-site-verification" content="0e2b53e8888e0e7cad3c37284482aa13ec402c44" />
+<link rel="icon" href="/assets/favicon.ico">
 </d:html>
 <d:js>
 </d:js>
