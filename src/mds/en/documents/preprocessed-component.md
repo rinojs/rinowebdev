@@ -6,10 +6,10 @@
 
 ```
 // @component indicates that it should be preprocessed component
-// ./src/pcomponents/test.tot is file path of where component file is
+// ./src/components/test.tot is file path of where component file is
 <d:html>
 some html...
-{{ @component, ./src/pcomponents/test.tot }}
+{{ @component, ./src/components/test.tot }}
 some html...
 </d:html>
 ```

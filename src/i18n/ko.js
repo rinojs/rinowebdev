@@ -462,40 +462,6 @@ async function ko()
         },
         {
             data: {
-                title: "@props | 문서 | Rino.js",
-                desc: "Rino.js의 @props. 문서.",
-                url: "ko/documents/preprocessed-props.html"
-            },
-            mds: [
-                {
-                    name: "content",
-                    filename: path.resolve(__dirname, "../mds/ko/documents/preprocessed-props.md")
-                }
-            ],
-            tots: [
-                {
-                    name: "header",
-                    filename: path.resolve(__dirname, "../tots/ko/components/header.tot")
-                },
-                {
-                    name: "footer",
-                    filename: path.resolve(__dirname, "../tots/ko/components/footer.tot")
-                },
-                {
-                    name: "sidebar",
-                    filename: path.resolve(__dirname, "../tots/ko/components/doc-sidebar.tot")
-                }
-            ],
-            pageFilename: path.resolve(__dirname, "../pages/documents/preprocessed-props.tot"),
-            distDirname: path.resolve(__dirname, "../../dist/ko/documents/"),
-            filenames: {
-                html: "preprocessed-props.html",
-                css: "preprocessed-props-style.css",
-                js: "preprocessed-props-main.js"
-            }
-        },
-        {
-            data: {
                 title: "회피 구문 | 문서 | Rino.js",
                 desc: "Rino.js의 회피 구문. 문서.",
                 url: "ko/documents/escape.html"
@@ -530,8 +496,42 @@ async function ko()
         },
         {
             data: {
-                title: "런타임 컴포넌트 | 문서 | Rino.js",
-                desc: "Rino.js의 런타임 컴포넌트. 문서.",
+                title: "리노킷 | 문서 | Rino.js",
+                desc: "Rino.js의 리노킷. 문서.",
+                url: "ko/documents/rinokit.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/ko/documents/rinokit.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/ko/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/ko/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/ko/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/rinokit.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/ko/documents/"),
+            filenames: {
+                html: "rinokit.html",
+                css: "rinokit-style.css",
+                js: "rinokit-main.js"
+            }
+        },
+        {
+            data: {
+                title: "컴포넌트 | 문서 | Rino.js",
+                desc: "리노킷의 컴포넌트. 문서.",
                 url: "ko/documents/component.html"
             },
             mds: [
@@ -560,6 +560,74 @@ async function ko()
                 html: "component.html",
                 css: "component-style.css",
                 js: "component-main.js"
+            }
+        },
+        {
+            data: {
+                title: "데이터 | 문서 | Rino.js",
+                desc: "리노킷의 데이터. 문서.",
+                url: "ko/documents/data.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/ko/documents/data.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/ko/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/ko/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/ko/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/data.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/ko/documents/"),
+            filenames: {
+                html: "data.html",
+                css: "data-style.css",
+                js: "data-main.js"
+            }
+        },
+        {
+            data: {
+                title: "리노킷 API | 문서 | Rino.js",
+                desc: "리노킷 API. 문서.",
+                url: "ko/documents/rinokit-api.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/ko/documents/rinokit-api.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/ko/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/ko/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/ko/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/rinokit-api.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/ko/documents/"),
+            filenames: {
+                html: "rinokit-api.html",
+                css: "rinokit-api-style.css",
+                js: "rinokit-api-main.js"
             }
         }
     ]

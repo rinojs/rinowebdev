@@ -3,7 +3,9 @@
 ## Whole Structure
 
 ```
-Preprocess the project files -> static files or data
+Preprocess the project files
+-> static files or data
+-> Rinokit componets and data during runtime
 ```
 
 \
@@ -23,7 +25,7 @@ Rino preprocess files based on syntax in `<d:html></d:html>`. And preprocessing 
 Preload files will be placed at the top of the javascript and css files.
 Then components for client side will be placed. The last part will be the preprocessed components and pages.
 
-Some syntax, they are applied in the order: `@data, @props, @tot`. You can try to do something with it. But it may not be safe because it is not like there's a rule `@data` or any others should be applied first.
+Some syntax, they are applied in the order: `@data, @tot`. You can try to do something with it. But it may not be safe because it is not like there's a rule `@data` or any others should be applied first.
 
 ## Dev() Directory Structrue and System
 
@@ -31,7 +33,6 @@ Some syntax, they are applied in the order: `@data, @props, @tot`. You can try t
 Project/src/index.js
 Project/src/pages.js
 Project/src/pages/
-Project/src/pcomponents/
 Project/src/components/
 Project/src/preloads/
 Project/src/tots/
@@ -48,9 +49,7 @@ It is totally up to you how you setup your project. But it is recommended to put
 
 `Project/src/pages/` is where you store .tot files for pages
 
-`Project/src/pcomponents/` is where you store .tot files for preprocessed components
-
-`Project/src/components/` is where you store .tot files for runtime components. You probably would not use this. Because it is not that powerful at the moment (version 1.3.0).
+`Project/src/components/` is where you store .tot files for preprocessed components
 
 `Project/src/preloads/` is where you store .tot files for preloading.
 
