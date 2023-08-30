@@ -3,7 +3,9 @@
 ## 전체 구조
 
 ```
-프로젝트 파일 전처리 -> 정적 파일 또는 데이터
+프로젝트 파일 전처리
+-> 정적 파일 또는 데이터
+-> 런타임에서의 리노킷 컴포넌트와 데이터
 ```
 
 웹페이지에서 모든 것을 처리하는 대신, 전처리가 필요한 것과 아닌 것으로 나누어 처리하는 것이 더 효율적입니다.
@@ -21,7 +23,7 @@ Rino는 `<d:html></d:html>`의 구문을 기반으로 파일을 전처리합니�
 
 @preload는 Javascript와 CSS 파일의 상단에 배치됩니다. 그 다음 클라이언트(런타임) 컴포넌트가 배치됩니다. 마지막 부분은 전처리된 구성 요소와 페이지의 Javascript와 CSS입니다.
 
-일부 구문은 `@data, @props, @tot` 순서로 적용됩니다. 그것으로 뭔가를 시도할 수 있습니다. 하지만 `@data`를 먼저 적용해야한다거나 다른 것들을 먼적 적용해야한다는 순서 규칙이 없기 때문에 안전하지 않을 수 있습니다.
+일부 구문은 `@data, @tot` 순서로 적용됩니다. 그것으로 뭔가를 시도할 수 있습니다. 하지만 `@data`를 먼저 적용해야한다거나 다른 것들을 먼적 적용해야한다는 순서 규칙이 없기 때문에 안전하지 않을 수 있습니다.
 
 ## Dev() 디렉토리 구조 및 시스템
 
@@ -29,7 +31,6 @@ Rino는 `<d:html></d:html>`의 구문을 기반으로 파일을 전처리합니�
 Project/src/index.js
 Project/src/pages.js
 Project/src/pages/
-Project/src/pcomponents/
 Project/src/components/
 Project/src/preloads/
 Project/src/tots/
@@ -46,9 +47,7 @@ Project/dist/
 
 `Project/src/pages/`는 페이지용 .tot 파일을 저장하는 곳입니다.
 
-`Project/src/pcomponents/`는 전처리할 컴포넌트용 .tot 파일을 저장하는 곳입니다.
-
-`Project/src/components/`는 런타임 컴포넌트용 .tot 파일을 저장하는 곳입니다. 아마 이것을 잘 사용하지 않을 것입니다. 현재로서는 그렇게 강력하지 않기 때문입니다 (버전 1.3.0).
+`Project/src/components/`는 전처리할 컴포넌트용 .tot 파일을 저장하는 곳입니다.
 
 `Project/src/preloads/`는 사전 로드용 .tot 파일을 저장하는 곳입니다.
 

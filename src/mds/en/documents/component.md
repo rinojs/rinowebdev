@@ -2,62 +2,78 @@
 
 ## Component in runtime
 
-You write the component code just like preprocessed component but you can not place `@preload` or `@component`. You can still pass `@data` and `@props` to the runtime component as they are part of preprocessing. Rino will put the HTML part as a variable in the Javascript code. And you can use it for manipulating your GUI in runtime.
-
-Remember, we are planning to rework this feature as it is not that powerful. So this may change a lot.
+Rinokit just follows the standard of HTML and Web Component for building a component.
+So if you know how to use a web component. You are having more advantages for building a web page with Rinokit.
 
 ## Example:
 
-### /src/page/index.tot:
+/src/preloads/preload.tot:
+
+```
+<d:js>
+    import Rino from 'rinokit';
+
+    const rino = new Rino();
+<d:js>
+<d:css>
+</d:css>
+```
+
+### /src/components/component-name.tot:
+
+You must use template tag `<template></template>` and id `component-name` for component.
+You don't have to place them multiple times. You only need one template for one component in a page.
+The template is going to be hidden by default.
 
 ```
 <d:html>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <script src="main.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ @data.title }}</title>
-    </head>
-    <body>
-        some HTML content...
-        {{ component, ./test/components/comptest.tot, componentHTML }}
-        <button @click="addComponent();">Click me to add innerHTML</button>
-        <div id="comptesting"></div>
-        some HTML content...
-    </body>
-    </html>
+    <template id="componentName">
+        {{ component, componentName2 }}
+
+        or
+
+        {{ component, componentName2, someId2 }}
+    <template>
+    <template id="componentName2">
+    <template>
 </d:html>
 <d:css>
     some css...
 </d:css>
 <d:js>
     some Javascript...
-    function addComponent()
-    {
-        document.getElementById('comptesting').innerHTML = document.getElementById('comptesting').innerHTML + componentHTML;
-    }
 </d:js>
 ```
 
-### /src/components/comptest.tot:
+### In single page or single component:
 
 ```
 <d:html>
-    <div>
-        This is a component test!
-        And if it is successful this should be attached to the one of div.
-    </div>
+    some html...
 </d:html>
 <d:js>
     some Javascript...
+
+    async function addSomeComponent(target)
+    {
+        const element = rino.buildComponent("componentName", "someId");
+        target.append(element);
+    }
+
 </d:js>
 <d:css>
     some CSS...
 </d:css>
 ```
 
-In the example, from `{{ component, ./test/components/comptest.tot, componentHTML }}` componentHTML becomes name of variable in Javascript. If you want to pass props, then you can do it like `{{ component, ./test/components/comptest.tot, componentHTML, someprops }}`.
+In the example, from `{{ component, componentName2, someId2 }}`,
+`component` indicates that it is a component, `componentName2` indicates the name of component,
+and `someId2` is id for component.
+You can skip id part then it will be `{{ component, componentName2 }}`.
+
+Child component's ID is added like: `parentId-childId`.
+This feature help us to create a unique ID for all the component and we can manipulate them better.
+In case of example the id of `{{ component, componentName2, someId2 }}` is `someId-someId2`.
+
+If you want to render a component again, you can just build the component again and replace the old component with a new one.
+And this is just efficient as you are controlling your page by small size, just like the popular web frameworks.

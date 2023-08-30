@@ -77,28 +77,14 @@ args: {
 }
 ```
 
-## rino.buildPComponent()
-
-```
-buildPComponent()
-arguments:
-{
-    filename: `This is the file path of tot file.`,
-    data: `js object, json data for injecting to the html, css and javascript`,
-    props: properties that is passed from the parent.
-}
-```
-
 ## rino.buildComponent()
 
 ```
 buildComponent()
-arguments: args
-args: {
+arguments:
+{
     filename: `This is the file path of tot file.`,
-    data: `json data for injecting to the html, css and javascript`,
-    props: `properties that is passed from the parent.`,
-    htmlName: `Name of the variable for html content.`,
+    data: `js object, json data for injecting to the html, css and javascript`
 }
 ```
 

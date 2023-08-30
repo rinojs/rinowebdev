@@ -6,10 +6,10 @@
 
 ```
 // @component 전처리된 컴포넌트여야 함을 나타냅니다.
-// ./src/pcomponents/test.tot는 컴포넌트 파일이 있는 파일 경로입니다.
+// ./src/components/test.tot는 컴포넌트 파일이 있는 파일 경로입니다.
 <d:html>
 some html...
-{{ @component, ./src/pcomponents/test.tot }}
+{{ @component, ./src/components/test.tot }}
 some html...
 </d:html>
 ```

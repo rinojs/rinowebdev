@@ -462,40 +462,6 @@ async function en()
         },
         {
             data: {
-                title: "Preprocessed Props | Doc | Rino.js",
-                desc: "Preprocessed Props of Rino.js. Documentation.",
-                url: "documents/preprocessed-props.html"
-            },
-            mds: [
-                {
-                    name: "content",
-                    filename: path.resolve(__dirname, "../mds/en/documents/preprocessed-props.md")
-                }
-            ],
-            tots: [
-                {
-                    name: "header",
-                    filename: path.resolve(__dirname, "../tots/en/components/header.tot")
-                },
-                {
-                    name: "footer",
-                    filename: path.resolve(__dirname, "../tots/en/components/footer.tot")
-                },
-                {
-                    name: "sidebar",
-                    filename: path.resolve(__dirname, "../tots/en/components/doc-sidebar.tot")
-                }
-            ],
-            pageFilename: path.resolve(__dirname, "../pages/documents/preprocessed-props.tot"),
-            distDirname: path.resolve(__dirname, "../../dist/documents/"),
-            filenames: {
-                html: "preprocessed-props.html",
-                css: "preprocessed-props-style.css",
-                js: "preprocessed-props-main.js"
-            }
-        },
-        {
-            data: {
                 title: "Escape | Doc | Rino.js",
                 desc: "Escape of Rino.js. Documentation.",
                 url: "documents/escape.html"
@@ -530,8 +496,42 @@ async function en()
         },
         {
             data: {
+                title: "Rinokit | Doc | Rino.js",
+                desc: "Rinokit. Documentation.",
+                url: "documents/rinokit.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/en/documents/rinokit.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/en/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/en/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/en/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/rinokit.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/documents/"),
+            filenames: {
+                html: "rinokit.html",
+                css: "rinokit-style.css",
+                js: "rinokit-main.js"
+            }
+        },
+        {
+            data: {
                 title: "Component | Doc | Rino.js",
-                desc: "Component of Rino.js. Documentation.",
+                desc: "Component of Rinokit. Documentation.",
                 url: "documents/component.html"
             },
             mds: [
@@ -560,6 +560,74 @@ async function en()
                 html: "component.html",
                 css: "component-style.css",
                 js: "component-main.js"
+            }
+        },
+        {
+            data: {
+                title: "Data | Doc | Rino.js",
+                desc: "Data of Rinokit. Documentation.",
+                url: "documents/data.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/en/documents/data.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/en/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/en/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/en/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/data.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/documents/"),
+            filenames: {
+                html: "data.html",
+                css: "data-style.css",
+                js: "data-main.js"
+            }
+        },
+        {
+            data: {
+                title: "Rinokit API | Doc | Rino.js",
+                desc: "Rinokit API. Documentation.",
+                url: "documents/rinokit-api.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/en/documents/rinokit-api.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/en/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/en/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/en/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/rinokit-api.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/documents/"),
+            filenames: {
+                html: "rinokit-api.html",
+                css: "rinokit-api-style.css",
+                js: "rinokit-api-main.js"
             }
         }
     ]
