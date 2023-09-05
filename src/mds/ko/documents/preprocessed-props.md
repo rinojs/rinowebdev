@@ -9,7 +9,7 @@
 
 ```
 <d:html>
-{{ @component, ./src/components/child-component.tot, props1 }}
+{{ @component, ./src/components/child-component.tot, props1, props2 }}
 </d:html>
 <d:css>
 </d:css>
