@@ -84,7 +84,8 @@ buildComponent()
 arguments:
 {
     filename: `This is the file path of tot file.`,
-    data: `js object, json data for injecting to the html, css and javascript`
+    data: `js object, json data for injecting to the html, css and javascript`,
+    props: properties that is passed from the parent. List.
 }
 ```
 

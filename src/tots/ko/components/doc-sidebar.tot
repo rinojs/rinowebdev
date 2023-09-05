@@ -13,10 +13,13 @@
 <ul class="menu-list">
     <li><a href="/ko/documents/preprocessed-page.html">페이지</a></li>
     <li><a href="/ko/documents/preprocessed-component.html">@component</a></li>
+    <li><a href="/ko/documents/preprocessed-props.html">@props</a></li>
     <li><a href="/ko/documents/preprocessed-preload.html">@preload</a></li>
     <li><a href="/ko/documents/preprocessed-data.html">@data</a></li>
     <li><a href="/ko/documents/preprocessed-tot.html">@tot</a></li>
     <li><a href="/ko/documents/preprocessed-md.html">@md</a></li>
+    <li><a href="/ko/documents/innerdata.html">내부 데이터</a></li>
+    <li><a href="/ko/documents/comment.html">주석</a></li>
     <li><a href="/ko/documents/escape.html">회피 구문</a></li>
     <li><a href="/ko/documents/preprocessing-api.html">리노 API</a></li>
 </ul>
