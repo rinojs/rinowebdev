@@ -13,10 +13,13 @@
 <ul class="menu-list">
     <li><a href="/documents/preprocessed-page.html">Page</a></li>
     <li><a href="/documents/preprocessed-component.html">@component</a></li>
+    <li><a href="/documents/preprocessed-props.html">@props</a></li>
     <li><a href="/documents/preprocessed-preload.html">@preload</a></li>
     <li><a href="/documents/preprocessed-data.html">@data</a></li>
     <li><a href="/documents/preprocessed-tot.html">@tot</a></li>
     <li><a href="/documents/preprocessed-md.html">@md</a></li>
+    <li><a href="/documents/innerdata.html">Inner Data</a></li>
+    <li><a href="/documents/comment.html">Comment</a></li>
     <li><a href="/documents/escape.html">Escape</a></li>
     <li><a href="/documents/preprocessing-api.html">Rino API</a></li>
 </ul>

@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/rinojs/rinowebdev#readme",
   "dependencies": {
-    "rinojs": "^1.5.2",
+    "rinojs": "^1.5.9",
     "rinokit": "^0.0.2"
   }
 }

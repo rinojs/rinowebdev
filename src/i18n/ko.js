@@ -462,6 +462,108 @@ async function ko()
         },
         {
             data: {
+                title: "@props | 문서 | Rino.js",
+                desc: "Rino.js의 @props. 문서.",
+                url: "ko/documents/preprocessed-props.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/ko/documents/preprocessed-props.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/ko/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/ko/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/ko/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/preprocessed-props.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/ko/documents/"),
+            filenames: {
+                html: "preprocessed-props.html",
+                css: "preprocessed-props-style.css",
+                js: "preprocessed-props-main.js"
+            }
+        },
+        {
+            data: {
+                title: "내부 데이터 | 문서 | Rino.js",
+                desc: "Rino.js의 내부 데이터. 문서.",
+                url: "ko/documents/innerdata.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/ko/documents/innerdata.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/ko/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/ko/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/ko/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/innerdata.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/ko/documents/"),
+            filenames: {
+                html: "innerdata.html",
+                css: "innerdata-style.css",
+                js: "innerdata-main.js"
+            }
+        },
+        {
+            data: {
+                title: "주석 | 문서 | Rino.js",
+                desc: "Rino.js의 주석. 문서.",
+                url: "ko/documents/comment.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/ko/documents/comment.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/ko/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/ko/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/ko/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/comment.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/ko/documents/"),
+            filenames: {
+                html: "comment.html",
+                css: "comment-style.css",
+                js: "comment-main.js"
+            }
+        },
+        {
+            data: {
                 title: "회피 구문 | 문서 | Rino.js",
                 desc: "Rino.js의 회피 구문. 문서.",
                 url: "ko/documents/escape.html"

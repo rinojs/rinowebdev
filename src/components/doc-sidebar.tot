@@ -43,7 +43,8 @@ async function showMenu()
 }
 
 #sidebar {
-    height: calc(100vh - 20px);
+    min-height: calc(100vh - 20px);
+    margin-bottom: 20px;
     min-width: 300px;
     max-width: 300px;
     padding: 0px;
@@ -57,6 +58,8 @@ async function showMenu()
 
 @media all and (max-width: 940px) {
     #sidebar {
+        height: calc(100vh - 20px);
+        padding-bottom: 40px;
         min-width: 0px;
         display: none;
         position: fixed;

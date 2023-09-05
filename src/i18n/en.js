@@ -462,6 +462,108 @@ async function en()
         },
         {
             data: {
+                title: "Preprocessed Props | Doc | Rino.js",
+                desc: "Preprocessed Props of Rino.js. Documentation.",
+                url: "documents/preprocessed-props.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/en/documents/preprocessed-props.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/en/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/en/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/en/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/preprocessed-props.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/documents/"),
+            filenames: {
+                html: "preprocessed-props.html",
+                css: "preprocessed-props-style.css",
+                js: "preprocessed-props-main.js"
+            }
+        },
+        {
+            data: {
+                title: "Inner Data | Doc | Rino.js",
+                desc: "Inner Data of Rino.js. Documentation.",
+                url: "documents/innerdata.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/en/documents/innerdata.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/en/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/en/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/en/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/innerdata.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/documents/"),
+            filenames: {
+                html: "innerdata.html",
+                css: "innerdata-style.css",
+                js: "innerdata-main.js"
+            }
+        },
+        {
+            data: {
+                title: "Comment | Doc | Rino.js",
+                desc: "Comment of Rino.js. Documentation.",
+                url: "documents/comment.html"
+            },
+            mds: [
+                {
+                    name: "content",
+                    filename: path.resolve(__dirname, "../mds/en/documents/comment.md")
+                }
+            ],
+            tots: [
+                {
+                    name: "header",
+                    filename: path.resolve(__dirname, "../tots/en/components/header.tot")
+                },
+                {
+                    name: "footer",
+                    filename: path.resolve(__dirname, "../tots/en/components/footer.tot")
+                },
+                {
+                    name: "sidebar",
+                    filename: path.resolve(__dirname, "../tots/en/components/doc-sidebar.tot")
+                }
+            ],
+            pageFilename: path.resolve(__dirname, "../pages/documents/comment.tot"),
+            distDirname: path.resolve(__dirname, "../../dist/documents/"),
+            filenames: {
+                html: "comment.html",
+                css: "comment-style.css",
+                js: "comment-main.js"
+            }
+        },
+        {
+            data: {
                 title: "Escape | Doc | Rino.js",
                 desc: "Escape of Rino.js. Documentation.",
                 url: "documents/escape.html"
