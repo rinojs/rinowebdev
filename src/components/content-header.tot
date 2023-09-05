@@ -18,6 +18,9 @@
                 {{ @data.tot.header.document }}
                 {{ @data.tot.header.sponsor }}
                 {{ @data.tot.header.shop }}
+                <a class="navbar-item" target="_blank" href="https://www.npmjs.com/package/rinojs">
+                    npm
+                </a>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
                     {{ @data.tot.header.languages }}
