@@ -37,7 +37,7 @@ some html content...
 </d:css>
 ```
 
-result:
+결과:
 
 ```
 html:
@@ -49,5 +49,41 @@ css:
 .some-elelent
 {
     background-color: #222;
+}
+```
+
+## 인라인으로 넘겨주는 방법
+
+버전 v1.5.10 부터 인라인 기능을 사용할 수 있습니다.
+
+부모 컴포넌트:
+
+```
+<d:html>
+{{ @component, filename, (#222), (<button></button>) }}
+</d:html>
+```
+
+자식 컴포넌트:
+
+```
+<d:html>
+{{ @props[1] }};
+</d:html>
+<d:css>
+button {
+    color: {{ @props[0] }};
+}
+</d:css>
+```
+
+결과:
+
+```
+html:
+<button></button>
+css:
+button {
+    color: #222;
 }
 ```

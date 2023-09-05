@@ -51,3 +51,39 @@ css:
     background-color: #222;
 }
 ```
+
+## How to pass props inline
+
+From version v1.5.10, we can use a inline props feature.
+
+Parent component:
+
+```
+<d:html>
+{{ @component, filename, (#222), (<button></button>) }}
+</d:html>
+```
+
+Child component:
+
+```
+<d:html>
+{{ @props[1] }};
+</d:html>
+<d:css>
+button {
+    color: {{ @props[0] }};
+}
+</d:css>
+```
+
+Result:
+
+```
+html:
+<button></button>
+css:
+button {
+    color: #222;
+}
+```
