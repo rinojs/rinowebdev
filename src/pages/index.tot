@@ -1,126 +1,147 @@
 <d:html>
-    <!DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
     <head>
         {{ @preload, ./src/preloads/preload.tot }}
-        {{ @preload, ./src/preloads/onload.tot }}
+
         <script type="text/javascript" src="main.js"></script>
+
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         {{ @component, ./src/components/head.tot }}
-        {{ @component, ./src/components/font.tot }}
 
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>{{ @data.title }}</title>
     </head>
     <body>
-        {{ @component, ./src/components/header.tot }}
-        <div class="mainview">
-            <section class="section">
-                <div id="mainTitle">
-                    <img id="mainImg" src="/assets/rino256.png">
-                    {{ @data.tot.content.maintitle }}
-                </div>
-                {{ @md, ./src/mds/ncr.md }}
-                <br />
-                {{ @data.tot.content.installation }}
-                <br />
-                <br />
-                {{ @md, ./src/mds/nir.md }}
-            </section>
-            <section class="section">
-                <div class="columns">
-                    {{ @data.tot.content.rinopros }}
-                </div>
-            </section>
-            <section class="section">
-                {{ @data.tot.content.sponsors }}
-            </section>
-            <section class="section">
-                {{ @data.tot.content.shop }}
-                <div class="columns">
-                    <img class="column merchImg" src="/assets/rino_bucket_hat.jpg">
-                    <img class="column merchImg" src="/assets/rino_backpack.jpg">
-                    <img class="column merchImg" src="/assets/rino_desk_mat.jpg">
-                </div>
-            </section>
+        <div class="mainview columns">
+            {{ @component, ./src/components/sidebar.tot }}
+            <main class="column">
+                {{ @component, ./src/components/header.tot }}
+                {{ @data.content }}
+                {{ @component, ./src/components/rino-footer.tot }}
+            </main>
         </div>
-        {{ @component, ./src/components/footer.tot }}
     </body>
-    </html>
+</html>
 </d:html>
+<d:js>
+</d:js>
 <d:css>
-.merchImg {
-    width: 256px;
-}
-
-.mt-3 {
-    margin-top: 6px;
-}
-
-.subtitle {
-    font-size: 1.5em;
-}
-
-.mainview .section p
+h1
 {
-    font-size: 1.1em;
+    font-size: 2.5em;
+    margin: 0.67em 0;
+    line-height: 1.25;
 }
 
-#mainTitle {
-    width: 600px;
-    margin: 50px auto;
-    color: #212121;
-    font-weight: bold;
-    font-size: 2em;
+h2
+{
+    font-size: 1.8em;
+    padding-bottom: 0.3em;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    line-height: 1.25;
+}
+
+h3
+{
+    line-height: 1.25;
+    font-size: 1.5em;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+p
+{
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+
+main ul
+{
+    padding-left: 2em;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+main ul li
+{
+    list-style: initial;
+    margin-top: 0.25em;
+}
+
+main p img
+{
+    display: flex;
     text-align: center;
+    maring-left: auto;
+    maring-right: auto;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    max-width: 100%;
 }
 
-#mainTitle h1 {
-    font-size: 1.4em;
-    width: 100%;
+body {
+    margin: 0px;
+    overflow-wrap: break-word;
+    font-family: 'Noto Sans', 'Noto Sans KR', BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    background-color: #FFEBEE;
+    min-height: 100vh;
 }
 
-#mainTitle h2 {
-    font-size: 1em;
+pre,
+code
+{
+    font-family:  'Noto Sans Mono', monaco, Consolas, "Lucida Console", Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace !important;
 }
 
-#mainImg {
-    margin: auto;
+pre
+{
+    margin-top: 0;
+    margin-bottom: 16px;
 }
 
-.non-selectable {
-    user-select: none;
+.block {
+    display: block !important;
 }
 
-.ml-4 {
-    margin-left: 8px !important;
+.mainview {
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0px auto 0px auto !important;
 }
 
-@media all and (max-width: 620px) {
-    #mainTitle {
-        width: auto;
-        color: #212121;
-        font-weight: bold;
-        font-size: 1.5em;
-        text-align: center;
-    }
-
-    .mainview .section .title {
-        font-size: 1.4em;
-    }
-
-    .mainview .section .subtitle {
-        font-size: 1.3em;
-    }
+main {
+    position: relative;
+    left: 300px;
+    right: 0;
+    min-height: 100%;
+    max-width: 700px;
+    background-color: #FFFFFF;
+    padding: 30px !important;
 }
 
-@media all and (max-width: 300px) {
-    #mainImg {
+img {
+    margin: 0px auto;
+    max-width: 100%;
+}
+
+
+@media all and (max-width: 1000px) {
+    .mainview {
         width: 100%;
+        max-width: 100% !important;
+    }
+
+    main {
+        left: 0;
+        width: 100%;
+        max-width: 100% !important;
     }
 }
 </d:css>
-<d:js>
-</d:js>

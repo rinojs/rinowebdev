@@ -1,105 +1,141 @@
 <d:html>
-<div class="topHolder"></div>
-<header>
-    <nav class="navbar" role="navigation">
-        <div class="navbar-brand">
-            {{ @data.tot.header.headerlogo }}
-            <a role="button" @click="showMenu()" id="navButton" class="navbar-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-        </div>
-        <div id="navMenu" class="navbar-menu">
-            <div class="navbar-end">
-                {{ @data.tot.header.document }}
-                {{ @data.tot.header.sponsor }}
-                {{ @data.tot.header.shop }}
-                <a class="navbar-item" target="_blank" href="https://www.npmjs.com/package/rinojs">
-                    npm
-                </a>
-                <a class="navbar-item" target="_blank" href="https://github.com/rinojs">
-                    Github
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                    {{ @data.tot.header.languages }}
-                    </a>
-
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/">
-                            English
-                        </a>
-                        <a class="navbar-item" href="/ko/">
-                            한국어
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
-{{ @component, ./src/components/kofi-widget.tot }}
+<div class="header columns">
+    <div class="column">
+        <a role="button" id="menu-button" class="menu-button" @click="showSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <div class="select">
+        <select @change="if(this.value) location.href=(this.value);">
+            <option value="" selected="selected" disabled="disabled" hidden="hidden">
+            {{(
+                if(data.locale == "ko") result = "언어";
+                else result = "Language"
+            )}}
+            </option>
+            <option value="/">English</option>
+            <option value="/ko/">한국어</option>
+        </select>
+    </div>
+</div>
+<hr>
 </d:html>
 <d:js>
-let menuToggle = false;
-
-mount(() => {
-    if(document.getElementById("navButton").classList.contains("is-active"))
-    {
-        menuToggle = true;
-    }
-})
-
-function showMenu()
+async function showSidebar()
 {
-    if(document.getElementById("navButton").classList.contains("is-active"))
+    const sidebar = document.getElementById("sidebar");
+    const sidebarCover = document.getElementById("cover");
+    const menuButton = document.getElementById("menu-button");
+
+    if(sidebar.classList.contains("block"))
     {
-        document.getElementById("navButton").classList.remove("is-active");
-        document.getElementById("navMenu").classList.remove("is-active");
+        sidebar.classList.remove("block");
+        sidebarCover.classList.remove("block");
+        menuButton.classList.remove("active");
     }
     else
     {
-        document.getElementById("navButton").classList.add("is-active");
-        document.getElementById("navMenu").classList.add("is-active");
+        sidebar.classList.add("block");
+        sidebarCover.classList.add("block");
+        menuButton.classList.add("active");
     }
 }
-
 </d:js>
 <d:css>
-header {
-    margin: 0px auto;
-    top: 0;
+.menu-button
+{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+}
+
+.menu-button span
+{
     left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 940px !important;
-    position: fixed;
-    z-index: 9999;
-}
-
-.navbar {
-    border-bottom: 1px solid #ccc;
-}
-
-#header-logo-link {
-    display: inline-block;
-}
-
-#header-logo-link:hover {
-    opacity: 0.8;
-}
-
-#header-logo-text {
-    margin-left: 5px;
-    display: inline-block;
-    height: 32px;
-    vertical-align: bottom;
-}
-
-.topHolder {
+    display: block;
+    width: 16px;
     height: 1px;
-    width: 100%;
-    margin: 0px;
+    background-color: #333;
+    position: absolute;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translate(-50%, -50%);
+}
+
+.menu-button span:nth-child(1)
+{
+    top: calc(50% - 5px);
+}
+
+.menu-button span:nth-child(2)
+{
+    top: 50%;
+}
+
+.menu-button span:nth-child(3)
+{
+    top: calc(50% + 5px);
+}
+
+.menu-button.active span
+{
+    left: calc(50% - 2px);
+}
+
+.menu-button.active span:nth-child(1) {
+    transform: translateX(-5px) translateY(5px) rotate(45deg);
+}
+
+.menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.active span:nth-child(3) {
+    transform: translateX(-5px) translateY(-5px) rotate(-45deg);
+}
+
+.menu-button-cover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    z-index: 1000000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-button-cover:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-button-cover:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menu-button-wrapper
+{
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    vertical-align: top;
+}
+
+
+@media all and (max-width: 1000px) {
+    .menu-button
+    {
+        display: block;
+    }
 }
 </d:css>
