@@ -1,26 +1,18 @@
 {
   "name": "rinowebdev",
-  "version": "0.0.2",
-  "description": "Rino.js Website",
-  "main": "src/index.js",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "dev": "node src/index.js"
+    "dev": "node src/dev.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rinojs/rinowebdev.git"
-  },
-  "keywords": [
-    "Rino"
-  ],
-  "author": "Victor Chanil Park",
-  "license": "SEE LICENSE IN LICENSE",
-  "bugs": {
-    "url": "https://github.com/rinojs/rinowebdev/issues"
-  },
-  "homepage": "https://github.com/rinojs/rinowebdev#readme",
   "dependencies": {
-    "rinojs": "^1.5.10",
-    "rinokit": "^0.0.2"
+    "chokidar": "^3.5.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "marked": "^9.0.0",
+    "rinojs": "^1.5.18",
+    "rinokit": "^0.0.2",
+    "ws": "^8.14.1"
   }
 }
