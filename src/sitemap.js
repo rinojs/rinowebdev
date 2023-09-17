@@ -46,7 +46,7 @@ function setupLinkList(filename, locale = "")
 
         return 0;
     });
-    list = list.map(file => file.replace(/^\d+\.\s*/, '').trim());
+    list = list.map(file => file.replace(/^\d+\.\s*/, '').trim() + ".html");
 
     if (locale)
     {
