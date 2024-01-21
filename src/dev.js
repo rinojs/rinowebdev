@@ -29,7 +29,7 @@ async function dev()
     await copyAssets(publicdir, distdir);
     console.log(`Copying assets is done...`);
 
-    await buildThis(enmd, distdir, domain, name);
+    await buildThis(enmd, distdir, domain, name, "");
     await buildThis(komd, path.join(distdir, `/ko`), domain, name, "ko");
 
     let port = await findPort(3000);
