@@ -1,2 +1,0 @@
-# rinoweb
-Rino.js Website
