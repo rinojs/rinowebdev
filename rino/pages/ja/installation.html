@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <component @name="/ja/head" />
+    <script type="text/javascript" src="/scripts/common.js"></script>
+    <link rel="stylesheet" href="/styles/common.css" />
+    <meta
+      name="description"
+      content="ウェブサイトを作成するためのRino.jsプロジェクトのインストール方法"
+    />
+    <meta name="og:title" content="Rino.jsインストール" />
+    <meta
+      name="og:description"
+      content="ウェブサイトを作成するためのRino.jsプロジェクトのインストール方法"
+    />
+    <meta name="og:site_name" content="Rino.js" />
+    <meta name="og:url" content="https://rino.opdev1004.com/ja/installation" />
+    <meta name="og:image" content="https://rino.opdev1004.com/images/rino512.png" />
+    <title>Rino.jsインストール</title>
+  </head>
+  <body>
+    <component @name="/ja/header" />
+    <div class="content-container">
+        <component @name="/ja/sidebar"/>
+        <main>
+            <h1>インストール</h1>
+            <p>
+                最新のNode.jsをインストールする必要があります
+            </p>
+            <p>
+                次に、ターミナルで以下を入力します：
+            </p>
+            <pre><code>npm create rino@latest</code></pre>
+            <p>
+                これにより、ウェブサイトの構築用プロジェクトがセットアップされます。
+            </p>
+            <p>
+                また、手動で使用する場合は <code>npm i rinojs@latest</code> を使用することもできます。
+                しかし、ほとんどの場合、この方法を使用する必要はありません。
+            </p>
+        </main>
+    </div>
+    <component @name="/ja/footer">
+  </body>
+</html>

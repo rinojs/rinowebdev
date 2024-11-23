@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <component @name="/ko/head" />
+    <script type="text/javascript" src="/scripts/common.js"></script>
+    <link rel="stylesheet" href="/styles/common.css" />
+    <meta
+      name="description"
+      content="빠르게 배울 수 있는 사전 처리 직관적인 웹 프레임워크. Rino.js"
+    />
+    <meta name="og:title" content="Rino.js" />
+    <meta
+      name="og:description"
+      content="빠르게 배울 수 있는 사전 처리 직관적인 웹 프레임워크. Rino.js"
+    />
+    <meta name="og:site_name" content="Rino.js" />
+    <meta name="og:url" content="https://rino.opdev1004.com/ko/" />
+    <meta name="og:image" content="" />
+    <title>리노.js</title>
+    <style>
+      .sidebar-wrapper {
+        display: none;
+      }
+      
+      main {
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <component @name="/ko/header" />
+    <div class="content-container">
+      <component @name="/ko/sidebar"/>
+      <main>
+        <div class="Hero">
+          <img id="mainImg" src="/images/rino256.png" />
+          <h1>Rino.js</h1>
+          <h2>빠르게 배울 수 있는 사전 처리, 직관적인 웹 프레임워크</h2>
+          <br />
+          <p>
+          간단하게
+          </p>
+          <p>
+            <code>npm create rino@latest</code>
+          </p>
+          <p>
+          Rino.js로 웹사이트를 개발하고 생성하세요.
+          </p>
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+        <div>
+          <h2>스폰서</h2>
+          <p>
+            Rino 프로젝트는 활발히 후원 및 스폰서를 찾고 있습니다. 스폰서 명단이 여기에 표시됩니다. <br />
+            <a href="/ko/donate" style="color:red;">후원</a>을 고려해주세요!
+          </p>
+        </div>
+      </main>
+    </div>
+    <component @name="/ko/footer">
+  </body>
+</html>

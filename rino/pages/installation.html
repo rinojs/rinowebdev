@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <component @name="/en/head" />
+    <script type="text/javascript" src="/scripts/common.js"></script>
+    <link rel="stylesheet" href="/styles/common.css" />
+    <meta
+      name="description"
+      content="How to install and start Rino.js project for building website"
+    />
+    <meta name="og:title" content="Rino.js Installation" />
+    <meta
+      name="og:description"
+      content="How to install and start Rino.js project for building website"
+    />
+    <meta name="og:site_name" content="Rino.js" />
+    <meta name="og:url" content="https://rino.opdev1004.com/installation" />
+    <meta name="og:image" content="https://rino.opdev1004.com/images/rino512.png" />
+    <title>Rino.js Installation</title>
+  </head>
+  <body>
+    <component @name="/en/header" />
+    <div class="content-container">
+        <component @name="/en/sidebar"/>
+        <main>
+            <h1>Installation</h1>
+            <p>
+                You need the latest Node.js installed.
+            </p>
+            <p>
+                Then from terminal, enter the following:
+            </p>
+            <pre><code>npm create rino@latest</code></pre>
+            <p>
+                This will setup your project for building website.
+            </p>
+            <p>
+                You can also <code>npm i rinojs@latest</code> for manual use.
+                But most of time you wouldn't need to do that way.
+            </p>
+        </main>
+    </div>
+    <component @name="/en/footer">
+  </body>
+</html>

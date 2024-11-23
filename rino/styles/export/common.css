@@ -1,0 +1,87 @@
+@import "../header.css";
+@import "../sidebar.css";
+@import "../footer.css";
+
+a {
+  color: #333;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ef5350;
+}
+
+a:active {
+  color: #c62828;
+}
+
+body {
+  font-family: "Noto Sans Mono", "Noto Sans KR", "Malgun Gothic", sans-serif,
+    "Monaco", "Consolas", "Courier New", "DejaVu Sans Mono", monospace;
+  margin: 0px;
+  word-break: normal;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+pre {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Noto Sans Mono", "Monaco", "Consolas", "Courier New",
+    "DejaVu Sans Mono", monospace;
+}
+
+pre code {
+  display: block;
+  background-color: transparent;
+  color: #f8f8f2;
+  border-radius: 0px;
+  font-size: 1em;
+  border-style: none;
+}
+
+code {
+  background-color: #f4f4f4;
+  color: #c7254e;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 90%;
+  font-family: "Noto Sans Mono", "Monaco", "Consolas", "Courier New",
+    "DejaVu Sans Mono", monospace;
+  border: 1px solid #e1e1e8;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  min-height: 100vh;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+main .Hero {
+  text-align: center;
+}
+
+img {
+  margin: 0px auto;
+  max-width: 256px;
+  width: 100%;
+}
+
+@media screen and (max-width: 899px) {
+  main {
+    padding: 5px;
+  }
+}

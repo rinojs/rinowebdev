@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <component @name="/en/head" />
+    <script type="text/javascript" src="/scripts/common.js"></script>
+    <link rel="stylesheet" href="/styles/common.css" />
+    <meta
+      name="description"
+      content="Fast learning, preprocessing, intuitive web framework. Rino.js"
+    />
+    <meta name="og:title" content="Rino.js" />
+    <meta
+      name="og:description"
+      content="Fast learning, preprocessing, intuitive web framework. Rino.js"
+    />
+    <meta name="og:site_name" content="Rino.js" />
+    <meta name="og:url" content="https://rino.opdev1004.com/" />
+    <meta name="og:image" content="" />
+    <title>Rino.js</title>
+    <style>
+      .sidebar-wrapper {
+        display: none;
+      }
+      
+      main {
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <component @name="/en/header" />
+    <div class="content-container">
+      <component @name="/en/sidebar"/>
+      <main>
+        <div class="Hero">
+          <img id="mainImg" src="/images/rino256.png" />
+          <h1>Rino.js</h1>
+          <h2>Fast learning, preprocessing, intuitive web framework</h2>
+          <br />
+          <p>
+          Simply
+          </p>
+          <p>
+            <code>npm create rino@latest</code>
+          </p>
+          <p>
+          to develop and generate your website with Rino.js
+          </p>
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+        <div>
+          <h2>Sponsor</h2>
+          <p>
+            Rino is actively looking for fund and sponsor. Sponsors will be placed here. <br />
+            Please consider for <a href="/donate" style="color:red;">donation</a>!
+          </p>
+        </div>
+      </main>
+    </div>
+    <component @name="/en/footer">
+  </body>
+</html>
