@@ -1,0 +1,16 @@
+{
+    "name": "rino",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "node dev.js",
+        "generate": "node generate.js",
+        "generate-sitemap": "node generate.js && node sitemap.js",
+        "sitemap": "node sitemap.js",
+        "image": "node image-compression.js"
+    },
+    "dependencies": {
+        "rinojs": "^2.0.8"
+    }
+}
