@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <component @name="/en/head" />
+    <component @path="/en/head" />
     <script type="text/javascript" src="/scripts/common.js"></script>
     <link rel="stylesheet" href="/styles/common.css" />
     <meta
@@ -21,31 +21,27 @@
       .sidebar-wrapper {
         display: none;
       }
-      
+
       main {
         box-shadow: none;
       }
     </style>
   </head>
   <body>
-    <component @name="/en/header" />
+    <component @path="/en/header" />
     <div class="content-container">
-      <component @name="/en/sidebar"/>
+      <component @path="/en/sidebar" />
       <main>
         <div class="Hero">
           <img id="mainImg" src="/images/rino256.png" />
           <h1>Rino.js</h1>
           <h2>Fast learning, preprocessing, intuitive web framework</h2>
           <br />
-          <p>
-          Simply
-          </p>
+          <p>Simply</p>
           <p>
             <code>npm create rino@latest</code>
           </p>
-          <p>
-          to develop and generate your website with Rino.js
-          </p>
+          <p>to develop and generate your website with Rino.js</p>
           <br />
           <br />
           <br />
@@ -54,12 +50,14 @@
         <div>
           <h2>Sponsor</h2>
           <p>
-            Rino is actively looking for fund and sponsor. Sponsors will be placed here. <br />
-            Please consider for <a href="/donate" style="color:red;">donation</a>!
+            Rino is actively looking for fund and sponsor. Sponsors will be
+            placed here. <br />
+            Please consider for
+            <a href="/donate" style="color: red">donation</a>!
           </p>
         </div>
       </main>
     </div>
-    <component @name="/en/footer">
+    <component @path="/en/footer" />
   </body>
 </html>
