@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <component @path="/en/head" />
+    <script type="text/javascript" src="/scripts/common.js"></script>
+    <link rel="stylesheet" href="/styles/common.css" />
+    <meta
+      name="description"
+      content="From Rino.js 2, its syntax has become based on standard HTML. You will find that it is so easy to learn."
+    />
+    <meta name="og:title" content="Rino.js Syntax" />
+    <meta
+      name="og:description"
+      content="From Rino.js 2, its syntax has become based on standard HTML. You will find that it is so easy to learn."
+    />
+    <meta name="og:site_name" content="Rino.js" />
+    <meta name="og:url" content="https://rino.opdev1004.com/syntax" />
+    <meta
+      name="og:image"
+      content="https://rino.opdev1004.com/images/rino512.png"
+    />
+    <title>Rino.js Syntax</title>
+  </head>
+  <body>
+    <component @path="/en/header" />
+    <div class="content-container">
+      <component @path="/en/sidebar" />
+      <main>
+        <script @type="md" type="text/markdown">
+          # Syntax
+
+          Starting from Rino.js 2, the syntax is based on standard HTML,
+          making it intuitive and easy to learn.
+          For example, the component would be like this
+          (Read [Project Structure](/project_structure) for more information):
+
+          ```html
+          <component @path="/header" @tag="header" />
+          ```
+
+          In this page, we are going to cover Rino.js syntax that is not covered in the project structure.
+
+          ## Templating HTML with Javascript / Typescript
+
+          Rino.js supports powerful templating capabilities using JavaScript or TypeScript.
+          This feature allows dynamic creation of HTML content,
+          such as integrating npm packages, reading files, or programmatically generating content.
+
+          ### Key Points:
+
+          - Use the `@type` attribute to specify the language (js, javascript, ts, typescript).
+          - Assign the resulting string to the global `result` variable (no need to declare `result` explicitly).
+          - All templating code runs in the Node.js VM.
+          - Currently, `import/export` statements are not supported.
+
+          ### Examples:
+
+          Using JavaScript:
+
+          ```javascript
+          <script @type="js" type="text/javascript">
+          result = "<div>Hello, Rino.js!</div>";
+          <\/script>
+          ```
+
+          Using TypeScript:
+
+          ```typescript
+          <script @type="ts" type="text/typescript">
+          result = "<div>Hello, Rino.js with TypeScript!</div>";
+          <\/script>
+          ```
+
+          ## Markdown
+
+          Rino.js allows embedding Markdown directly within an HTML file.
+          This complements the option to load Markdown from an external file using the `@path` attribute.
+
+          ### Key Points:
+
+          - Use the `@type` attribute with values md or markdown.
+          - Escape the closing `<\/script>` tag by adding a backslash `<\/`.
+
+          ### Example:
+
+          ```
+            <script @type="md" type="text/markdown">
+            # Markdown Title
+            This is Markdown content inside an HTML file.
+            <\/script>
+          ```
+        </script>
+      </main>
+    </div>
+    <component @path="/en/footer" />
+  </body>
+</html>

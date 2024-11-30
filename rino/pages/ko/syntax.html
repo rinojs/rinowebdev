@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <component @path="/ko/head" />
+    <script type="text/javascript" src="/scripts/common.js"></script>
+    <link rel="stylesheet" href="/styles/common.css" />
+    <meta
+      name="description"
+      content="Rino.js 2부터, Rino.js의 구문은 표준 HTML을 기반으로 변경되어 직관적이고 배우기 쉽습니다."
+    />
+    <meta name="og:title" content="Rino.js 구문" />
+    <meta
+      name="og:description"
+      content="Rino.js 2부터, Rino.js의 구문은 표준 HTML을 기반으로 변경되어 직관적이고 배우기 쉽습니다."
+    />
+    <meta name="og:site_name" content="Rino.js" />
+    <meta name="og:url" content="https://rino.opdev1004.com/ko/syntax" />
+    <meta
+      name="og:image"
+      content="https://rino.opdev1004.com/images/rino512.png"
+    />
+    <title>Rino.js 구문</title>
+  </head>
+  <body>
+    <component @path="/ko/header" />
+    <div class="content-container">
+      <component @path="/ko/sidebar" />
+      <main>
+        <script @type="md" type="text/markdown">
+          # 구문
+
+          Rino.js 2부터, Rino.js의 구문은 표준 HTML을 기반으로 변경되어 직관적이고 배우기 쉽습니다.
+          예를 들어, 컴포넌트는 다음과 같이 정의됩니다
+          ([프로젝트 구조](/ko/project_structure)를 참조하세요):
+
+          ```html
+          <component @path="/header" @tag="header" />
+          ```
+
+          이 페이지에서는 프로젝트 구조에서 다루지 않은 Rino.js 구문을 설명합니다.
+
+          ## 자바스크립트 / 타입스크립트를 이용한 HTML 템플릿
+
+          Rino.js는 JavaScript나 TypeScript를 활용한 강력한 템플릿 기능을 지원합니다.
+          이 기능을 통해 npm 패키지를 통합하거나, 파일을 읽고,
+          프로그래밍적으로 HTML 콘텐츠를 생성할 수 있습니다.
+
+          ### 주요 포인트:
+
+          - `@type` 속성을 사용해 언어(js, javascript, ts, typescript)를 지정하세요.
+          - 결과 문자열을 전역 `result` 변수에 할당하세요(`result`를 명시적으로 선언할 필요 없음).
+          - 모든 템플릿 코드는 Node.js VM에서 실행됩니다.
+          - 현재 `import/export` 문은 지원되지 않습니다.
+
+          ### 예시:
+
+          자바스크립트 사용:
+
+          ```javascript
+          <script @type="js" type="text/javascript">
+          result = "<div>안녕하세요, Rino.js!</div>";
+          <\/script>
+          ```
+
+          타입스크립트 사용:
+
+          ```typescript
+          <script @type="ts" type="text/typescript">
+          result = "<div>안녕하세요, Rino.js TypeScript!</div>";
+          <\/script>
+          ```
+
+          ## 마크다운
+
+          Rino.js는 HTML 파일 내에 마크다운을 직접 포함할 수 있습니다.
+          이는 `@path` 속성을 사용해 외부 파일에서 Markdown을 로드하는 옵션을 보완합니다.
+
+          ### 주요 포인트:
+
+          - `@type` 속성에 md 또는 markdown 값을 사용하세요.
+          - 닫는 `<\/script>` 태그는 백슬래시(`<\/`)를 추가해 이스케이프 처리하세요.
+
+          ### 예시:
+
+          ```
+            <script @type="md" type="text/markdown">
+              # 마크다운 제목
+              HTML 파일에 포함된 마크다운 콘텐츠입니다.
+            <\/script>
+          ```
+        </script>
+      </main>
+    </div>
+    <component @path="/ko/footer" />
+  </body>
+</html>
