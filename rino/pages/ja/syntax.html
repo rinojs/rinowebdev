@@ -49,9 +49,9 @@
           ### 主なポイント:
 
           - `@type`属性を使用して、言語（js, javascript, ts, typescript）を指定します。
-          - 結果の文字列をグローバル変数`result`に代入します（`result`を明示的に宣言する必要はありません）。
-          - すべてのテンプレートコードは Node.js の VM 内で実行されます。
-          - 現在、`import/export`文はサポートされていません。
+          - console.log() を通じて任意のコンテンツを出力します。
+          - Javascript/Typescript パッケージを使用できます。
+          - HTML ページ パスはプロセス引数として渡されるため、共有コンポーネントで HTML ページ パスに基づいてページ テンプレートを生成できます。
 
           ### 例:
 
@@ -59,7 +59,9 @@
 
           ```javascript
           <script @type="js" type="text/javascript">
-          result = "<div>こんにちは、Rino.js!</div>";
+          import os from "os";
+          console.log(os.type());
+          console.log("<div>Hello, Rino.js!</div>");
           <\/script>
           ```
 
@@ -67,7 +69,9 @@
 
           ```typescript
           <script @type="ts" type="text/typescript">
-          result = "<div>こんにちは、Rino.js TypeScript!</div>";
+          import os from "os";
+          console.log(os.type());
+          console.log("<div>Hello, Rino.js with TypeScript!</div>");
           <\/script>
           ```
 
