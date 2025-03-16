@@ -48,9 +48,9 @@
           ### 주요 포인트:
 
           - `@type` 속성을 사용해 언어(js, javascript, ts, typescript)를 지정하세요.
-          - 결과 문자열을 전역 `result` 변수에 할당하세요(`result`를 명시적으로 선언할 필요 없음).
-          - 모든 템플릿 코드는 Node.js VM에서 실행됩니다.
-          - 현재 `import/export` 문은 지원되지 않습니다.
+          - console.log()를 통해 모든 콘텐츠를 출력합니다.
+          - Javascript/Typescript 패키지를 사용할 수 있습니다.
+          - HTML 페이지 경로가 프로세스 인수로 전달되므로 공유하는 컴포넌트에서 HTML 페이지 경로에 따라 페이지 템플릿을 만들 수 있습니다.
 
           ### 예시:
 
@@ -58,7 +58,9 @@
 
           ```javascript
           <script @type="js" type="text/javascript">
-          result = "<div>안녕하세요, Rino.js!</div>";
+          import os from "os";
+          console.log(os.type());
+          console.log("<div>Hello, Rino.js!</div>");
           <\/script>
           ```
 
@@ -66,7 +68,9 @@
 
           ```typescript
           <script @type="ts" type="text/typescript">
-          result = "<div>안녕하세요, Rino.js TypeScript!</div>";
+          import os from "os";
+          console.log(os.type());
+          console.log("<div>Hello, Rino.js with TypeScript!</div>");
           <\/script>
           ```
 

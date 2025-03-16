@@ -49,9 +49,9 @@
           ### Key Points:
 
           - Use the `@type` attribute to specify the language (js, javascript, ts, typescript).
-          - Assign the resulting string to the global `result` variable (no need to declare `result` explicitly).
-          - All templating code runs in the Node.js VM.
-          - Currently, `import/export` statements are not supported.
+          - Print any content through console.log().
+          - Javascript/Typescript packages can be used.
+          - Since the HTML page path is passed as a process argument, you can generate page templates based on the HTML page path in shared components.
 
           ### Examples:
 
@@ -59,7 +59,9 @@
 
           ```javascript
           <script @type="js" type="text/javascript">
-          result = "<div>Hello, Rino.js!</div>";
+          import os from "os";
+          console.log(os.type());
+          console.log("<div>Hello, Rino.js!</div>");
           <\/script>
           ```
 
@@ -67,7 +69,9 @@
 
           ```typescript
           <script @type="ts" type="text/typescript">
-          result = "<div>Hello, Rino.js with TypeScript!</div>";
+          import os from "os";
+          console.log(os.type());
+          console.log("<div>Hello, Rino.js with TypeScript!</div>");
           <\/script>
           ```
 
